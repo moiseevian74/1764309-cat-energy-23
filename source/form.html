@@ -7,18 +7,14 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
 
-    <a class="page-header__logo">
+  <header class="page-header">
+    <a class="page-header__logo" href="index.html">
       <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
     </a>
-
     <p class="page-header__cap-text">Cat energy</p>
-
     <nav class="main-nav">
-
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item"><a class="site-list__link" href="blank.html">Главная</a></li>
@@ -26,57 +22,47 @@
           <li class="site-list__item"><a class="site-list__link">Подбор программы</a></li>
         </ul>
       </div>
-
     </nav>
-
   </header>
 
   <main class="page-main">
 
     <section class="selection-form">
-
       <div class="selection-form__wrapper">
         <h1 class="selection-form__heading">Подбор программы</h1>
         <p class="selection-form__heading-text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-
         <h2 class="visually-hidden">Форма</h2>
-        <form class="program-form-cats" method="GET" action="https://echo.htmlacademy.ru/">
 
+        <form class="program-form-cats" method="GET" action="https://echo.htmlacademy.ru/">
           <fieldset class="program-form-cats__cats-data">
             <label for="cat-name">Имя:<sup>*</sup></label>
             <input class="program-form-cats__cats-data-input" type="text" name="name" placeholder="Барсик" id="cat-name"
               autocomplete="off">
-
             <label for="cat-weight">Вес (кг):<sup>*</sup></label>
             <input class="program-form-cats__cats-data-input" type="number" name="weight" placeholder="7"
               id="cat-weight" autocomplete="off">
-
             <label for="cat-age">Возраст (лет):</label>
             <input class="program-form-cats__cats-data-input" type="number" name="age" placeholder="7" id="cat-age"
               autocomplete="off">
           </fieldset>
 
           <fieldset class="program-form-cats__program-selection">
-            <input class="program-form-cats__program-selection-input" type="radio" id="choice-slim" name="slim"
+            <input class="program-form-cats__program-selection-input" type="radio" id="choice-slim" name="program"
               value="slim" checked>
             <label for="choice-slim">Похудение</label>
-
-            <input class="program-form-cats__program-selection-input" type="radio" id="choice-pro" name="pro"
+            <input class="program-form-cats__program-selection-input" type="radio" id="choice-pro" name="program"
               value="pro">
             <label for="choice-pro">Набор массы</label>
-
-            <input class="program-form-cats__program-selection-input" type="radio" id="choice-advice" name="advice"
+            <input class="program-form-cats__program-selection-input" type="radio" id="choice-advice" name="program"
               value="advice">
             <label for="choice-advice">Не знаю (нужен ваш совет)</label>
           </fieldset>
 
           <fieldset class="program-form-cats__contacts">
             <h3 class="heading-h3">Контактные данные (владельца кота)</h3>
-
             <label class="icon-contacts" for="email">E-mail:<sup>*</sup></label>
             <input class="program-form-cats__contacts-input" type="email" name="email" placeholder="kuklachev@gmail.com"
               id="email" autocomplete="off">
-
             <label class="icon-contacts" for="cat-weight">Телефон:<sup>*</sup></label>
             <input class="program-form-cats__contacts-input" type="tel" name="phone" placeholder="8 (960) 900-60-90"
               id="phone" autocomplete="off">
@@ -84,14 +70,12 @@
 
           <fieldset class="program-form-cats__comments">
             <h3 class="heading-h3">Комментарий</h3>
-
             <label for="comment"></label>
             <textarea id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <fieldset class="program-form-cats__additionally">
             <h3 class="heading-h3">Дополнительно</h3>
-
             <legend class="filter-legend">Инфраструктура:</legend>
             <ul class="program-form-cats__list">
               <li class="program-form-cats__item">
@@ -128,11 +112,9 @@
         <section class="map">
           <img class="map__image" src="img/location-map.png" width="320" height="362" alt="Карта как добраться">
         </section>
-
   </main>
 
   <footer class="page-footer">
-
     <div class="page-footer__wrapper">
       <div class="page-footer__text">
         <p class="page-footer__contacts-text">
