@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -17,7 +17,7 @@
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a class="site-list__link" href="blank.html">Главная</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
           <li class="site-list__item"><a class="site-list__link" href="catalog.html">Каталог продукции</a></li>
           <li class="site-list__item"><a class="site-list__link">Подбор программы</a></li>
         </ul>
@@ -33,71 +33,68 @@
         <p class="selection-form__heading-text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <h2 class="visually-hidden">Форма</h2>
 
-        <form class="program-form-cats" method="GET" action="https://echo.htmlacademy.ru/">
-          <fieldset class="program-form-cats__cats-data">
-            <label for="cat-name">Имя:<sup>*</sup></label>
-            <input class="program-form-cats__cats-data-input" type="text" name="name" placeholder="Барсик" id="cat-name"
+        <form class="program-form" method="GET" action="https://echo.htmlacademy.ru/">
+          <fieldset class="program-form__divide">
+            <label class="program-form__label" for="cat-name">Имя:<sup>*</sup></label>
+            <input class="program-form__input" type="text" name="name" placeholder="Барсик" id="cat-name"
               autocomplete="off">
-            <label for="cat-weight">Вес (кг):<sup>*</sup></label>
-            <input class="program-form-cats__cats-data-input" type="number" name="weight" placeholder="7"
-              id="cat-weight" autocomplete="off">
-            <label for="cat-age">Возраст (лет):</label>
-            <input class="program-form-cats__cats-data-input" type="number" name="age" placeholder="7" id="cat-age"
+            <label class="program-form__label" for="cat-weight">Вес (кг):<sup>*</sup></label>
+            <input class="program-form__input" type="number" name="weight" placeholder="7" id="cat-weight"
               autocomplete="off">
+            <label class="program-form__label" for="cat-age">Возраст (лет):</label>
+            <input class="program-form__input" type="number" name="age" placeholder="7" id="cat-age" autocomplete="off">
           </fieldset>
 
-          <fieldset class="program-form-cats__program-selection">
-            <input class="program-form-cats__program-selection-input" type="radio" id="choice-slim" name="program"
-              value="slim" checked>
-            <label for="choice-slim">Похудение</label>
-            <input class="program-form-cats__program-selection-input" type="radio" id="choice-pro" name="program"
-              value="pro">
-            <label for="choice-pro">Набор массы</label>
-            <input class="program-form-cats__program-selection-input" type="radio" id="choice-advice" name="program"
-              value="advice">
-            <label for="choice-advice">Не знаю (нужен ваш совет)</label>
+          <fieldset class="program-form__divide">
+            <input class="program-form__input" type="radio" id="choice-slim" name="program" value="slim" checked>
+            <label class="program-form__label" for="choice-slim">Похудение</label>
+            <input class="program-form__input" type="radio" id="choice-pro" name="program" value="pro">
+            <label class="program-form__label" for="choice-pro">Набор массы</label>
+            <input class="program-form__input" type="radio" id="choice-advice" name="program" value="advice">
+            <label class="program-form__label" for="choice-advice">Не знаю (нужен ваш совет)</label>
           </fieldset>
 
-          <fieldset class="program-form-cats__contacts">
+          <fieldset class="program-form__divide">
             <h3 class="heading-h3">Контактные данные (владельца кота)</h3>
-            <label class="icon-contacts" for="email">E-mail:<sup>*</sup></label>
-            <input class="program-form-cats__contacts-input" type="email" name="email" placeholder="kuklachev@gmail.com"
-              id="email" autocomplete="off">
-            <label class="icon-contacts" for="cat-weight">Телефон:<sup>*</sup></label>
-            <input class="program-form-cats__contacts-input" type="tel" name="phone" placeholder="8 (960) 900-60-90"
-              id="phone" autocomplete="off">
+            <label class="program-form__label program-form__label--icon-mail" for="email">E-mail:<sup>*</sup></label>
+            <input class="program-form__input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email"
+              autocomplete="off">
+            <label class="program-form__label program-form__label--icon-phone"
+              for="cat-weight">Телефон:<sup>*</sup></label>
+            <input class="program-form__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" id="phone"
+              autocomplete="off">
           </fieldset>
 
-          <fieldset class="program-form-cats__comments">
+          <fieldset class="program-form__divide">
             <h3 class="heading-h3">Комментарий</h3>
-            <label for="comment"></label>
+            <label class="program-form__label" for="comment"></label>
             <textarea id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
-          <fieldset class="program-form-cats__additionally">
+          <fieldset class="program-form__divide">
             <h3 class="heading-h3">Дополнительно</h3>
             <legend class="filter-legend">Инфраструктура:</legend>
-            <ul class="program-form-cats__list">
-              <li class="program-form-cats__item">
-                <input class="program-form-cats__additionally-input" type="checkbox" name="sugar" id="sugar" checked>
-                <label for="shugar">Сахарозаменитель</label>
+            <ul class="program-form__list">
+              <li class="program-form__item">
+                <input class="program-form__input" type="checkbox" name="sugar" id="sugar" checked>
+                <label class="program-form__label program-form__label--icon" for="shugar">Сахарозаменитель</label>
               </li>
-              <li class="program-form-cats__item">
-                <input class="program-form-cats__additionally-input" type="checkbox" name="water" id="water">
-                <label for="water">Питьевая вода</label>
+              <li class="program-form__item">
+                <input class="program-form__input" type="checkbox" name="water" id="water">
+                <label class="program-form__label program-form__label--icon" for="water">Питьевая вода</label>
               </li>
-              <li class="program-form-cats__item">
-                <input class="program-form-cats__additionally-input" type="checkbox" name="milk" id="milk">
-                <label for="milk">Молоко</label>
+              <li class="program-form__item">
+                <input class="program-form__input" type="checkbox" name="milk" id="milk">
+                <label class="program-form__label program-form__label--icon" for="milk">Молоко</label>
               </li>
-              <li class="program-form-cats__item">
-                <input class="program-form-cats__additionally-input" type="checkbox" name="vitamin" id="vitamin">
-                <label for="vitamin">Витамины</label>
+              <li class="program-form__item">
+                <input class="program-form__input" type="checkbox" name="vitamin" id="vitamin">
+                <label class="program-form__label program-form__label--icon" for="vitamin">Витамины</label>
               </li>
             </ul>
           </fieldset>
           <button class="button" type="submit">Отправить заявку</button>
-          <small class="program-form-cats__legend">
+          <small class="program-form__legend">
             * — приведённые данные ложь
           </small>
         </form>
