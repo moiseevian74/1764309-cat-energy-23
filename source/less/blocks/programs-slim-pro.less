@@ -1,0 +1,95 @@
+.programs-slim-pro {
+  width: @secondWidth;
+  margin: 0 auto;
+}
+
+.programs-slim-pro__wrapper {
+  display: grid;
+  box-sizing: border-box;
+  margin: 20px auto;
+  grid-template-rows: 74px 1fr 57px;
+  background-color: @programs-backgound-color;
+}
+
+.programs-slim-pro__tittle {
+  position: relative;
+  display: grid;
+  text-align: center;
+  margin: 0;
+  font-family: @secondBase-font;
+  font-size: @h3-font-size;
+  line-height: @h3-font-line-height;
+  font-weight: @baseFont-weight;
+  color: @baseTextHeading-color;
+  text-transform: @textTransfrom-up;
+}
+
+.programs-slim-pro__tittle--slim {
+  width: 110px;
+  height: 37px;
+  padding-top: 30px;
+  padding-left: 91px;
+  padding-bottom: 9px;
+  padding-right: 79px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 22px;
+    left: 22px;
+    background-image: url("../img/cat_slim-logo.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.programs-slim-pro__tittle--pro {
+  width: 137px;
+  height: 37px;
+  padding-top: 30px;
+  padding-left: 91px;
+  padding-bottom: 9px;
+  padding-right: 52px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 68px;
+    height: 50px;
+    top: 24px;
+    left: 13px;
+    background-image: url("../img/cat_pro-logo.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.programs-slim-pro__description {
+  .reset-p-and-heading ();
+  margin: 23px 20px 0 20px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.programs-slim-pro__link {
+  .reset-a ();
+  min-width: 87px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  text-transform: @textTransfrom-up;
+  font-family: @secondBase-font;
+  font-size: 16px;
+  line-height: 16px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 12px;
+    top: 2px;
+    left: 101px;
+    background-image: url("../img/icon_arrow.svg");
+    background-repeat: no-repeat;
+  }
+}
