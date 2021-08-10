@@ -1,10 +1,15 @@
 .location {
-  width: @pageWidth;
+  width: @page-width;
   margin: 0 auto;
 }
 
+.location--inner-page {
+  background-color: @footer-backgound-color;
+  padding-top: 14px;
+}
+
 .location__wrapper {
-  width: @secondWidth;
+  width: @second-width;
   margin: 0 auto;
   box-sizing: border-box;
   display: grid;
@@ -17,10 +22,10 @@
   padding-top: 15px;
   font-size: 16px;
   line-height: 20px;
-  color: @baseTextHeading-color;
-  text-transform: @textTransfrom-up;
-  font-family: @secondBase-font;
-  font-weight: @baseFont-weight;
+  color: @base-text-heading-color;
+  text-transform: @text-transfrom-up;
+  font-family: @second-base-font;
+  font-weight: @base-font-weight;
 }
 
 .location__address {

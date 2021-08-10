@@ -3,12 +3,12 @@
 }
 
 .welcome__wrapper {
-  width: @pageWidth;
+  width: @page-width;
   text-align: center;
   //#68b738 фоновый цвет
   background: url("../img/background-welcome-main.jpg") no-repeat border-box;
   background-size: 320px 302px;
-  font-family: @secondBase-font;
+  font-family: @second-base-font;
   box-sizing: border-box;
 }
 
@@ -16,7 +16,7 @@
   font-size: @h1-font-size;
   line-height: @h1-font-line-height;
   color: @h1-mobile-color;
-  font-weight: @baseFont-weight;
+  font-weight: @base-font-weight;
   margin: 0 auto;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -26,20 +26,28 @@
 .welcome__description-contents {
   .reset-p-and-heading ();
   line-height: 18px;
-  color: @basicWhite;
+  color: @basic-white;
   padding-bottom: 26px;
-  text-transform: @textTransfrom-up;
+  text-transform: @text-transfrom-up;
 }
 
 .welcome__link {
   .reset-a ();
   display: inline-block;
   box-sizing: border-box;
-  color: @basicWhite;
-  text-transform: @textTransfrom-up;
-  background-color: @buttonBase-backgound-color;
+  color: @basic-white;
+  text-transform: @text-transfrom-up;
+  background-color: @button-base-backgound-color;
   width: 280px;
   min-height: 40px;
   padding-top: 11px;
   padding-bottom: 8px;
+
+  &:hover {
+    background-color: @hover-base-background-color;
+  }
+
+  &:focus {
+    color: @hover-base-color;
+  }
 }

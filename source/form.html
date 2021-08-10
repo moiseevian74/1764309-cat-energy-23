@@ -10,12 +10,17 @@
 <body class="page__body">
 
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
-    </a>
-    <p class="page-header__cap-text">Cat energy</p>
+    <div class="page-header__wrapper">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
+      </a>
+      <p class="page-header__cap-text">
+        <a href="index.html"><img class="page-header__cap-text-image" src="img/logo-text-header.svg" width="101" height="18"
+          alt="текст: cat energy"></a>
+      </p>
+      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    </div>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
@@ -35,75 +40,100 @@
         <h2 class="visually-hidden">Форма</h2>
 
         <form class="program-form" method="GET" action="https://echo.htmlacademy.ru/">
-          <fieldset class="program-form__divide">
-            <label class="program-form__label" for="cat-name">Имя:<sup>*</sup></label>
-            <input class="program-form__input" type="text" name="name" placeholder="Барсик" id="cat-name"
-              autocomplete="off">
-            <label class="program-form__label" for="cat-weight">Вес (кг):<sup>*</sup></label>
-            <input class="program-form__input" type="number" name="weight" placeholder="7" id="cat-weight"
-              autocomplete="off">
-            <label class="program-form__label" for="cat-age">Возраст (лет):</label>
-            <input class="program-form__input" type="number" name="age" placeholder="7" id="cat-age" autocomplete="off">
-          </fieldset>
+          <div class="program-form__border-bottom">
+            <fieldset class="program-form__divide">
+              <div>
+                <label class="program-form__label" for="cat-name">Имя:<sup>*</sup></label>
+                <input class="program-form__input program-form__input--maxwidth" type="text" name="name"
+                  placeholder="Барсик" id="cat-name" autocomplete="off">
+              </div>
+              <div>
+                <label class="program-form__label" for="cat-weight">Вес (кг):<sup>*</sup></label>
+                <input class="program-form__input program-form__input--maxwidth" type="number" name="weight"
+                  placeholder="7" id="cat-weight" autocomplete="off">
+              </div>
+              <div>
+                <label class="program-form__label" for="cat-age">Возраст (лет):</label>
+                <input class="program-form__input program-form__input--maxwidth" type="number" name="age"
+                  placeholder="7" id="cat-age" autocomplete="off">
+              </div>
+            </fieldset>
+          </div>
 
-          <fieldset class="program-form__divide">
-            <input class="program-form__input" type="radio" id="choice-slim" name="program" value="slim" checked>
-            <label class="program-form__label" for="choice-slim">Похудение</label>
-            <input class="program-form__input" type="radio" id="choice-pro" name="program" value="pro">
-            <label class="program-form__label" for="choice-pro">Набор массы</label>
-            <input class="program-form__input" type="radio" id="choice-advice" name="program" value="advice">
-            <label class="program-form__label" for="choice-advice">Не знаю (нужен ваш совет)</label>
-          </fieldset>
+          <div class="program-form__border-bottom">
+            <fieldset class="program-form__divide">
+              <div>
+                <input class="program-form__input-radio" type="radio" id="choice-slim" name="program" value="slim"
+                  checked>
+                <label class="program-form__label-radio" for="choice-slim">Похудение</label>
+              </div>
+              <div>
+                <input class="program-form__input-radio" type="radio" id="choice-pro" name="program" value="pro">
+                <label class="program-form__label-radio" for="choice-pro">Набор массы</label>
+              </div>
+              <div>
+                <input class="program-form__input-radio" type="radio" id="choice-advice" name="program" value="advice">
+                <label class="program-form__label-radio" for="choice-advice">Не знаю (нужен ваш совет)</label>
+              </div>
+            </fieldset>
+          </div>
 
           <fieldset class="program-form__divide">
             <h3 class="heading-h3">Контактные данные (владельца кота)</h3>
-            <label class="program-form__label program-form__label--icon-mail" for="email">E-mail:<sup>*</sup></label>
-            <input class="program-form__input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email"
-              autocomplete="off">
-            <label class="program-form__label program-form__label--icon-phone"
-              for="cat-weight">Телефон:<sup>*</sup></label>
-            <input class="program-form__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" id="phone"
-              autocomplete="off">
-          </fieldset>
-
-          <fieldset class="program-form__divide">
-            <h3 class="heading-h3">Комментарий</h3>
-            <label class="program-form__label" for="comment"></label>
-            <textarea id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div>
+              <label class="program-form__label program-form__label--icon-mail" for="email">E-mail:<sup>*</sup></label>
+              <input class="program-form__input program-form__input--maxwidth" type="email" name="email"
+                placeholder="kuklachev@gmail.com" id="email" autocomplete="off">
+            </div>
+            <div>
+              <label class="program-form__label program-form__label--icon-phone"
+                for="cat-weight">Телефон:<sup>*</sup></label>
+              <input class="program-form__input program-form__input--maxwidth" type="tel" name="phone"
+                placeholder="8 (960) 900-60-90" id="phone" autocomplete="off">
+            </div>
+            <h3 class="heading-h3 heading-h3--padding">Комментарий</h3>
+            <div>
+              <label class="program-form__label-text-aria" for="comment"></label>
+              <textarea class="program-form__text-aria" id="comment" name="comment"
+                placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </fieldset>
 
           <fieldset class="program-form__divide">
             <h3 class="heading-h3">Дополнительно</h3>
             <ul class="program-form__list">
               <li class="program-form__item">
-                <input class="program-form__input" type="checkbox" name="sugar" id="sugar" checked>
-                <label class="program-form__label program-form__label--icon" for="sugar">Сахарозаменитель</label>
+                <input class="program-form__input-checkbox" type="checkbox" name="sugar" id="sugar" checked>
+                <label class="program-form__label-checkbox" for="sugar">Сахарозаменитель</label>
               </li>
               <li class="program-form__item">
-                <input class="program-form__input" type="checkbox" name="water" id="water">
-                <label class="program-form__label program-form__label--icon" for="water">Питьевая вода</label>
+                <input class="program-form__input-checkbox" type="checkbox" name="water" id="water">
+                <label class="program-form__label-checkbox" for="water">Питьевая вода</label>
               </li>
               <li class="program-form__item">
-                <input class="program-form__input" type="checkbox" name="milk" id="milk">
-                <label class="program-form__label program-form__label--icon" for="milk">Молоко</label>
+                <input class="program-form__input-checkbox" type="checkbox" name="milk" id="milk">
+                <label class="program-form__label-checkbox" for="milk">Молоко</label>
               </li>
               <li class="program-form__item">
-                <input class="program-form__input" type="checkbox" name="vitamin" id="vitamin">
-                <label class="program-form__label program-form__label--icon" for="vitamin">Витамины</label>
+                <input class="program-form__input-checkbox" type="checkbox" name="vitamin" id="vitamin">
+                <label class="program-form__label-checkbox" for="vitamin">Витамины</label>
               </li>
             </ul>
           </fieldset>
-          <button class="button" type="submit">Отправить заявку</button>
-          <small class="program-form__legend">
-            * — приведённые данные ложь
-          </small>
+
+          <fieldset class="program-form__divide">
+            <button class="button button--form" type="submit">Отправить заявку</button>
+            <small class="program-form__legend">
+              * — Обязательные поля
+            </small>
+          </fieldset>
         </form>
       </div>
     </section>
 
-    <section class="location">
+    <section class="location location--inner-page">
       <div class="location__wrapper">
-        <h3 class="location__appeal">Приглашаем к сотрудничеству дилеров!</h3>
+        <h3 class="location__appeal">Приглашаем<br> к сотрудничеству дилеров!</h3>
         <p class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
     </section>
@@ -117,20 +147,27 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__text">
         <p class="page-footer__contacts-text">
-          Cat energy
+          <img class="page-footer__cap-text-image" src="img/logo-text-header.svg" width="128" height="24"
+            alt="текст: cat energy">
         </p>
       </div>
 
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a aria-label="перейти в группу vkontakte" class="social__link social__link--vkontakte" href="#"></a>
+            <a aria-label="перейти в группу vkontakte" href="#">
+              <img class="social__item-image" src="img/icon_vkontakte.svg" width="23" height="16" alt="">
+            </a>
           </li>
           <li class="social__item">
-            <a aria-label="перейти в instagram" class="social__link social__link--instagram" href="#"></a>
+            <a aria-label="перейти в instagram" href="#">
+              <img class="social__item-image" src="img/icon_instagram.svg" width="16" height="16" alt="">
+            </a>
           </li>
           <li class="social__item">
-            <a aria-label="перейти в facebook" class="social__link social__link--facebook" href="#"></a>
+            <a aria-label="перейти в facebook" href="#">
+              <img class="social__item-image" src="img/icon_facebook.svg" width="22" height="22" alt="">
+            </a>
           </li>
         </ul>
       </div>

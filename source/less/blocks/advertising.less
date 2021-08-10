@@ -1,0 +1,28 @@
+.advertising {
+  margin: 35px auto;
+  text-align: center;
+  box-sizing: border-box;
+  width: @second-width;
+  min-height: 289px;
+  background: @button-base-backgound-color url("../img/gift-photo-mobile.png") no-repeat;
+}
+
+.advertising__text {
+  position: relative;
+  margin: 0 auto;
+  width: 161px;
+  font-size: @button-size;
+  line-height: @button-line-height;
+  color: @basic-white;
+  padding-top: 186px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 78px;
+    height: 80px;
+    top: 58px;
+    left: 41px;
+    background: url("../../img/icon_gift.svg") no-repeat;
+  }
+}

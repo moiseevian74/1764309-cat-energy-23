@@ -1,5 +1,5 @@
 .programs-slim-pro {
-  width: @secondWidth;
+  width: @second-width;
   margin: 0 auto;
 }
 
@@ -11,20 +11,20 @@
   background-color: @programs-backgound-color;
 }
 
-.programs-slim-pro__tittle {
+.programs-slim-pro__title {
   position: relative;
   display: grid;
   text-align: center;
   margin: 0;
-  font-family: @secondBase-font;
+  font-family: @second-base-font;
   font-size: @h3-font-size;
   line-height: @h3-font-line-height;
-  font-weight: @baseFont-weight;
-  color: @baseTextHeading-color;
-  text-transform: @textTransfrom-up;
+  font-weight: @base-font-weight;
+  color: @base-text-heading-color;
+  text-transform: @text-transfrom-up;
 }
 
-.programs-slim-pro__tittle--slim {
+.programs-slim-pro__title--slim {
   width: 110px;
   height: 37px;
   padding-top: 30px;
@@ -44,7 +44,7 @@
   }
 }
 
-.programs-slim-pro__tittle--pro {
+.programs-slim-pro__title--pro {
   width: 137px;
   height: 37px;
   padding-top: 30px;
@@ -68,19 +68,25 @@
   .reset-p-and-heading ();
   margin: 23px 20px 0 20px;
   padding-bottom: 22px;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid @border-second-color;
 }
 
 .programs-slim-pro__link {
   .reset-a ();
-  min-width: 87px;
+  box-sizing: border-box;
+  width: 90px;
+  min-height: 18px;
   position: relative;
   top: 20px;
   left: 20px;
-  text-transform: @textTransfrom-up;
-  font-family: @secondBase-font;
+  text-transform: @text-transfrom-up;
+  font-family: @second-base-font;
   font-size: 16px;
   line-height: 16px;
+
+  &:focus {
+    .focus();
+  }
 
   &::after {
     content: "";
@@ -91,5 +97,14 @@
     left: 101px;
     background-image: url("../img/icon_arrow.svg");
     background-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    transform: scale(1.4, 1);
+  }
+
+  &:focus::after {
+    .focus();
+    transform: scale(1.4, 1);
   }
 }
