@@ -1,0 +1,110 @@
+.programs-slim-pro {
+  width: @second-width;
+  margin: 0 auto;
+}
+
+.programs-slim-pro__wrapper {
+  display: grid;
+  box-sizing: border-box;
+  margin: 20px auto;
+  grid-template-rows: 74px 1fr 57px;
+  background-color: @programs-backgound-color;
+}
+
+.programs-slim-pro__title {
+  position: relative;
+  display: grid;
+  text-align: center;
+  margin: 0;
+  font-family: @second-base-font;
+  font-size: @h3-font-size;
+  line-height: @h3-font-line-height;
+  font-weight: @base-font-weight;
+  color: @base-text-heading-color;
+  text-transform: @text-transfrom-up;
+}
+
+.programs-slim-pro__title--slim {
+  width: 110px;
+  height: 37px;
+  padding-top: 30px;
+  padding-left: 91px;
+  padding-bottom: 9px;
+  padding-right: 79px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 22px;
+    left: 22px;
+    background-image: url("../img/cat_slim-logo.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.programs-slim-pro__title--pro {
+  width: 137px;
+  height: 37px;
+  padding-top: 30px;
+  padding-left: 91px;
+  padding-bottom: 9px;
+  padding-right: 52px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 68px;
+    height: 50px;
+    top: 24px;
+    left: 13px;
+    background-image: url("../img/cat_pro-logo.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.programs-slim-pro__description {
+  .reset-p-and-heading ();
+  margin: 23px 20px 0 20px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid @border-second-color;
+}
+
+.programs-slim-pro__link {
+  .reset-a ();
+  box-sizing: border-box;
+  width: 90px;
+  min-height: 18px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  text-transform: @text-transfrom-up;
+  font-family: @second-base-font;
+  font-size: 16px;
+  line-height: 16px;
+
+  &:focus {
+    .focus();
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 12px;
+    top: 2px;
+    left: 101px;
+    background-image: url("../img/icon_arrow.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    transform: scale(1.4, 1);
+  }
+
+  &:focus::after {
+    .focus();
+    transform: scale(1.4, 1);
+  }
+}

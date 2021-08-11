@@ -1,0 +1,33 @@
+.location {
+  width: @page-width;
+  margin: 0 auto;
+}
+
+.location--inner-page {
+  background-color: @footer-backgound-color;
+  padding-top: 14px;
+}
+
+.location__wrapper {
+  width: @second-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 12px;
+}
+
+.location__appeal {
+  .reset-p-and-heading ();
+  padding-top: 15px;
+  font-size: 16px;
+  line-height: 20px;
+  color: @base-text-heading-color;
+  text-transform: @text-transfrom-up;
+  font-family: @second-base-font;
+  font-weight: @base-font-weight;
+}
+
+.location__address {
+  line-height: 20px;
+}

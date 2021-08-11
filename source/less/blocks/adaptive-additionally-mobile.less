@@ -1,0 +1,91 @@
+.adaptive-additionally-mobile {
+  width: @page-width;
+  margin: 0 auto;
+  background-color: @base-background-color;
+}
+
+.adaptive-additionally-mobile__title-wrapper {
+  width: @page-width;
+  margin: 0 auto;
+  border-bottom: 1px solid @border-base-color;
+}
+
+.adaptive-additionally-mobile__title {
+  position: relative;
+  .reset-p-and-heading ();
+  padding-top: 25px;
+  padding-bottom: 34px;
+  padding-left: 20px;
+  font-size: @h3-font-size;
+  font-weight: @base-font-weight;
+  line-height: @h3-font-second-line-height;
+  color: @base-text-heading-color;
+  font-family: @second-base-font;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 53px;
+    top: 39px;
+    left: 266px;
+    border-bottom: 2px solid @button-base-backgound-color;
+  }
+}
+
+.adaptive-additionally-mobile__wrapper {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: @second-width;
+  border-bottom: 1px solid @border-base-color;
+  min-height: 130px;
+}
+
+.adaptive-additionally-mobile__link {
+  .reset-a ();
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 10px;
+  min-height: 40px;
+  width: 280px;
+  color: @button-base-color;
+  text-transform: @text-transfrom-up;
+  font-size: @button-size;
+  font-family: @second-base-font;
+  line-height: @button-line-height;
+  background-color: @button-base-backgound-color;
+
+  &:hover {
+    background-color: @hover-base-background-color;
+  }
+
+  &:focus {
+    color: @hover-base-color;
+  }
+}
+
+.adaptive-additionally-mobile__head {
+  .reset-p-and-heading ();
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-size: @mobile-addproduct-head-size;
+  font-family: @second-base-font;
+  line-height: @mobile-addproduct-head-line-height;
+  color: @base-text-heading-color;
+  text-transform: @text-transfrom-up;
+}
+
+.adaptive-additionally-mobile__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.adaptive-additionally-mobile__text {
+  .reset-p-and-heading ();
+  line-height: 14px;
+  padding-bottom: 15px;
+
+  &:nth-child(2) {
+    text-align: right;
+  }
+}

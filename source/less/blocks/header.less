@@ -1,0 +1,92 @@
+.page-header {
+  min-height: 65px;
+  width: @page-width;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  justify-content: center;
+  background-color: @base-background-color;
+  text-transform: @text-transfrom-up;
+}
+
+.page-header__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.page-header__logo {
+  cursor: pointer;
+
+  &:hover {
+    .hover();
+  }
+
+  &:focus {
+    .focus();
+  }
+}
+
+.page-header__cap-text a {
+  cursor: pointer;
+
+  &:hover {
+    .hover();
+  }
+
+  &:focus {
+    .focus();
+  }
+}
+
+.page-header__toggle {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  background-color: @base-background-color;
+  border: none;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 15px;
+    left: 69px;
+    width: 24px;
+    height: 20px;
+    background-image: url("../img/logo-toggle.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  width: @page-width;
+}
+
+.main-nav__list {
+  .reset-ul ();
+
+  &:first-child {
+    border-top: 1px solid @border-base-color;
+  }
+}
+
+.site-list__link {
+  .reset-a ();
+  display: block;
+  box-sizing: border-box;
+  border-bottom: 1px solid @border-base-color;
+  width: @page-width;
+  min-height: 66px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: @second-base-font;
+  font-size: @link-font-size;
+  font-weight: @second-font-weight;
+  line-height: @link-line-height;
+}

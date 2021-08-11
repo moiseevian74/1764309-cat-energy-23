@@ -1,0 +1,53 @@
+.welcome {
+  min-height: 480px;
+}
+
+.welcome__wrapper {
+  width: @page-width;
+  text-align: center;
+  //#68b738 фоновый цвет
+  background: url("../img/background-welcome-main.jpg") no-repeat border-box;
+  background-size: 320px 302px;
+  font-family: @second-base-font;
+  box-sizing: border-box;
+}
+
+.welcome__heading-h1 {
+  font-size: @h1-font-size;
+  line-height: @h1-font-line-height;
+  color: @h1-mobile-color;
+  font-weight: @base-font-weight;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-transform: none;
+}
+
+.welcome__description-contents {
+  .reset-p-and-heading ();
+  line-height: 18px;
+  color: @basic-white;
+  padding-bottom: 26px;
+  text-transform: @text-transfrom-up;
+}
+
+.welcome__link {
+  .reset-a ();
+  display: inline-block;
+  box-sizing: border-box;
+  color: @basic-white;
+  text-transform: @text-transfrom-up;
+  background-color: @button-base-backgound-color;
+  width: 280px;
+  min-height: 40px;
+  padding-top: 11px;
+  padding-bottom: 8px;
+
+  &:hover {
+    background-color: @hover-base-background-color;
+  }
+
+  &:focus {
+    color: @hover-base-color;
+  }
+}

@@ -1,0 +1,69 @@
+.how-it-works {
+  width: @page-width;
+  margin: 0 auto 21px;
+}
+
+.how-it-works__wrapper {
+  width: @second-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.how-it-works__title {
+  padding-top: 6px;
+  padding-bottom: 40px;
+  .reset-p-and-heading ();
+  font-family: @second-base-font;
+  font-size: @h2-font-size;
+  line-height: @h2-font-line-height;
+  font-weight: @base-font-weight;
+  color: @base-text-heading-color;
+}
+
+.how-it-works__list {
+  .reset-ul ();
+}
+
+.how-it-works__item {
+  position: relative;
+  padding-bottom: 26px;
+  min-height: 54px;
+  padding-left: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+  }
+}
+
+.how-it-works__item--icon-leaf {
+  &::before {
+    background-image: url("../img/message-1.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.how-it-works__item--icon-powder {
+  &::before {
+    background-image: url("../img/message-2.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.how-it-works__item--icon-knife-fork {
+  &::before {
+    background-image: url("../img/message-3.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.how-it-works__item--icon-timer {
+  &::before {
+    background-image: url("../img/message-4.png");
+    background-repeat: no-repeat;
+  }
+}

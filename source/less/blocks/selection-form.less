@@ -1,0 +1,241 @@
+.selection-form {
+  width: @page-width;
+  margin: 0 auto;
+  background-color: @base-background-color;
+}
+
+.selection-form__wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: @page-width;
+}
+
+.selection-form__heading {
+  .reset-p-and-heading ();
+  padding-top: 27px;
+  padding-bottom: 37px;
+  padding-right: 5px;
+  padding-left: 20px;
+  font-size: @h1-font-size;
+  font-weight: @base-font-weight;
+  line-height: @h1-font-line-height;
+  color: @base-text-heading-color;
+  font-family: @second-base-font;
+}
+
+.selection-form__heading-text {
+  .reset-p-and-heading ();
+  width: 226px;
+  padding-left: 20px;
+  padding-right: 5px;
+  padding-bottom: 17px;
+  text-transform: @text-transfrom-up;
+  font-family: @second-base-font;
+}
+
+//Section-form
+.program-form {
+  text-transform: @text-transfrom-up;
+  font-family: @second-base-font;
+  background-color: @base-background-color;
+  font-size: @base-form-font-size;
+  line-height: @base-form-line-height;
+
+  .heading-h3 { //Заголовки формы
+    margin: 0 0 36px 0;
+    font-size: @h3-font-size;
+    line-height: 26px;
+    color: @base-text-heading-color;
+    font-weight: @base-font-weight;
+    text-transform: none;
+  }
+}
+
+.program-form__border-bottom {
+  width: @page-width;
+  margin: 0 auto;
+  border-bottom: 1px solid @border-base-color;
+}
+
+//Fieldset формы
+.program-form__divide {
+  width: @second-width;
+  margin: 0 auto;
+  padding: 22px 0 9px 0; //margin-bottom input'а + padding (для отступов fieldset'a)
+  border: none;
+
+  .program-form__label {
+    white-space: pre;
+    padding-top: 13px;
+    padding-right: 15px;
+    width: max-content;
+  }
+
+  .program-form__input--maxwidth { //input'ы, кроме radio/checkbox
+    border: 1px solid @border-base-color;
+    width: 100%;
+    height: 45px;
+    padding: 0;
+    box-sizing: border-box;
+    padding-left: 16px;
+    margin-bottom: 14px;
+    text-transform: @text-transfrom-up;
+  }
+
+  & div { //Контейнер input+label
+    display: flex;
+    flex-direction: row;
+  }
+
+  &:nth-child(4) {
+    margin-top: -6px;
+    margin-bottom: -13px;
+  }
+}
+
+//Radio кнопки
+.program-form__input-radio {
+  cursor: pointer;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -37px;
+    width: 14px;
+    height: 14px;
+    background-color: @button-base-backgound-color;
+    border-radius: 50%;
+  }
+}
+
+.program-form__label-radio {
+  position: relative;
+  margin: 0 0 19px 32px;
+  padding-top: 6px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -45px;
+    width: 28px;
+    height: 28px;
+    background-color: @base-background-color;
+    border-radius: 50%;
+    border: 1px solid @border-base-color;
+  }
+}
+
+//Comment
+.program-form__label--icon-mail {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 246px;
+    width: 18px;
+    height: 14px;
+    background-image: url("../img/email-icon.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.program-form__label--icon-phone {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 247px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/phone-icon.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.heading-h3--padding {
+  padding-top: 9px;
+  padding-bottom: 1px;
+}
+
+.program-form__label--text-aria {
+  padding: 0;
+}
+
+.program-form__text-aria {
+  box-sizing: border-box;
+  border: 1px solid @border-base-color;
+  padding: 12px 0 0 15px;
+  width: 280px;
+  min-height: 150px;
+  text-transform: @text-transfrom-up;
+}
+
+//Checkbox
+.program-form__list {
+  .reset-ul ();
+}
+
+.program-form__item {
+  padding-bottom: 25px;
+}
+
+.program-form__input-checkbox {
+  cursor: pointer;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -41px;
+    width: 18px;
+    height: 14px;
+    background-image: url("../img/checked-icon.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.program-form__label-checkbox {
+  margin-left: 30px;
+  cursor: pointer;
+  position: relative;
+  color: @base-text-heading-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -47px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid @border-base-color;
+  }
+}
+
+//Button-form
+.button--form {
+  color: @button-base-color;
+  background-color: @button-base-backgound-color;
+}
+
+.program-form__legend {
+  display: block;
+  text-align: center;
+  margin: 20px auto 21px;
+  text-transform: none;
+  line-height: @text-for-table-line-height;
+  font-family: @base-font;
+  font-size: @base-font-size;
+}

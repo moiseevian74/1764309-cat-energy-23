@@ -4,17 +4,23 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
 
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
-    </a>
-    <p class="page-header__cap-text">Cat energy</p>
+    <div class="page-header__wrapper">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
+      </a>
+      <p class="page-header__cap-text">
+        <a href=""><img class="page-header__cap-text-image" src="img/logo-text-header.svg" width="101" height="18"
+          alt="текст: cat energy"></a>
+      </p>
+      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    </div>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item"><a class="site-list__link">Главная</a></li>
@@ -37,23 +43,22 @@
       </div>
     </section>
 
-
     <section class="programs-slim-pro">
       <div class="programs-slim-pro__wrapper">
         <h2 class="visually-hidden">Выбор из двух программ</h2>
-        <h3 class="programs-slim-pro__tittle">Похудение</h3>
+        <h3 class="programs-slim-pro__title programs-slim-pro__title--slim">Похудение</h3>
         <p class="programs-slim-pro__description">Ваш кот весит больше собаки и почти утратил способность лазить
           по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-        <span class="programs-slim-pro__link"><a href="#">Каталог slim</a></span>
+        <a class="programs-slim-pro__link" href="#">Каталог slim</a>
       </div>
     </section>
 
     <section class="programs-slim-pro">
       <div class="programs-slim-pro__wrapper">
-        <h3 class="programs-slim-pro__tittle">Набор массы</h3>
+        <h3 class="programs-slim-pro__title programs-slim-pro__title--pro">Набор массы</h3>
         <p class="programs-slim-pro__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat
           Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-        <span class="programs-slim-pro__link"><a href="#">Каталог pro</a></span>
+        <a class="programs-slim-pro__link" href="#">Каталог pro</a>
       </div>
     </section>
 
@@ -80,13 +85,16 @@
           Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему
           спит по 16 часов в день. </p>
         <!--снижение веса/затрачено времени-->
-        <span class="live-example__weight">5 кг</span>
-        <span class="live-example__days">60 дней</span>
+        <div class="live-example__wrapper-blocks">
+          <span class="live-example__weight">5 кг</span>
+          <span class="live-example__days">60 дней</span>
+        </div>
         <p class="live-example__food-price">Затраты на питание: 15 000 руб.</p>
-        <img class="live-example-image image-slider" src="img/before-mobile-cat.jpg" width="311" height="232"
+        <img class="live-example-image image-slider" src="img/before-mobile-cat.png" width="311" height="232"
           alt="Фото котика до программы">
         <p class="live-example__toggles slider__toggles">
           <button class="slider__toggle" type="button">Было</button>
+          <span class="slider__image"><img src="img/slider.png" alt="Слайдер"></span>
           <button class="slider__toggle" type="button">Стало</button>
         </p>
       </div>
@@ -94,7 +102,7 @@
 
     <section class="location">
       <div class="location__wrapper">
-        <h3 class="location__appeal">Приглашаем к сотрудничеству дилеров!</h3>
+        <h3 class="location__appeal">Приглашаем<br> к сотрудничеству дилеров!</h3>
         <p class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
     </section>
@@ -108,20 +116,27 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__text">
         <p class="page-footer__contacts-text">
-          Cat energy
+          <img class="page-footer__cap-text-image" src="img/logo-text-header.svg" width="128" height="24"
+            alt="текст: cat energy">
         </p>
       </div>
 
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a aria-label="перейти в группу vkontakte" class="social__link social__link--vkontakte" href="#"></a>
+            <a aria-label="перейти в группу vkontakte" href="#">
+              <img class="social__item-image" src="img/icon_vkontakte.svg" width="23" height="16" alt="">
+            </a>
           </li>
           <li class="social__item">
-            <a aria-label="перейти в instagram" class="social__link social__link--instagram" href="#"></a>
+            <a aria-label="перейти в instagram" href="#">
+              <img class="social__item-image" src="img/icon_instagram.svg" width="16" height="16" alt="">
+            </a>
           </li>
           <li class="social__item">
-            <a aria-label="перейти в facebook" class="social__link social__link--facebook" href="#"></a>
+            <a aria-label="перейти в facebook" href="#">
+              <img class="social__item-image" src="img/icon_facebook.svg" width="22" height="22" alt="">
+            </a>
           </li>
         </ul>
       </div>

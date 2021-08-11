@@ -4,16 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
+
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
-    </a>
-    <p class="page-header__cap-text">Cat energy</p>
+    <div class="page-header__wrapper">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
+      </a>
+      <p class="page-header__cap-text">
+        <a href="index.html"><img class="page-header__cap-text-image" src="img/logo-text-header.svg" width="101" height="18"
+          alt="текст: cat energy"></a>
+      </p>
+      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    </div>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
@@ -27,212 +34,266 @@
   <main class="page__main">
 
     <section class="catalog">
+      <h1 class="catalog__heading">Каталог продукции</h1>
       <div class="catalog__wrapper">
-        <h1 class="catalog__heading">Каталог продукции</h1>
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
             <article class="product-card">
-              <a class="product-card__link" href="">
-                <h3 class="product-card__product-name">
-                  <span>Cat energy pro 500 г</span>
-                </h3>
-                <img class="product-card__product-image" src="img/catalog-image/cat-energy-pro-500g-chicken.jpg"
-                  width="68" height="86" alt="Изображение коробочки с питанием - курица 500г">
-              </a>
-              <table class="product-card__product-table">
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Масса</th>
-                  <th class="catalog__table-cell">500 г</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Вкус</th>
-                  <th class="catalog__table-cell">Курица</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Цена</th>
-                  <th class="product-card__table-cell">700 &#8381;</th>
-                </tr>
-              </table>
-              <a class="product-card__link product-card__link--buy" href=""
-                aria-label="Перейти на страницу оформления товара">Заказать</a>
+              <div class="catalog__wrapper-auxiliary-column-1">
+                <a class="product-card__link" href="">
+                  <img class="product-card__product-image" src="img/catalog-image/cat-energy-pro-500g-chicken.jpg"
+                    width="68" height="86" alt="Изображение коробочки с питанием - курица 500г">
+                </a>
+              </div>
+              <div class="catalog__wrapper-auxiliary-column-2">
+                <a class="product-card__link" href="">
+                  <h3 class="product-card__product-name">
+                    <span>Cat energy pro 500 г</span>
+                  </h3>
+                </a>
+                <table class="product-card__product-table">
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Масса</th>
+                    <th class="product-card__table-cell">500 г</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Вкус</th>
+                    <th class="product-card__table-cell">Курица</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Цена</th>
+                    <th class="product-card__table-cell">700 &#8381;</th>
+                  </tr>
+                </table>
+              </div>
+              <div class="catalog__wrapper-auxiliary-row">
+                <a class="product-card__link product-card__link--buy" href=""
+                  aria-label="Перейти на страницу оформления товара">Заказать</a>
+              </div>
             </article>
           </li>
 
           <li class="catalog__item">
             <article class="product-card">
-              <a class="product-card__link" href="">
-                <h3 class="product-card__product-name">
-                  <span>Cat energy pro 1000 г</span>
-                </h3>
-                <img class="product-card__product-image" src="img/catalog-image/cat-energy-pro-1000g-chicken.jpg"
-                  width="68" height="86" alt="Изображение коробочки с питанием - курица 1000г">
-              </a>
-              <table class="product-card__product-table">
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Масса</th>
-                  <th class="product-card__table-cell">1000 г</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Вкус</th>
-                  <th class="product-card__table-cell">Курица</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Цена</th>
-                  <th class="product-card__table-cell">1000 &#8381;</th>
-                </tr>
-              </table>
-              <a class="product-card__link product-card__link--buy" href=""
-                aria-label="Перейти на страницу оформления товара">Заказать</a>
+              <div class="catalog__wrapper-auxiliary-column-1">
+                <a class="product-card__link" href="">
+                  <img class="product-card__product-image" src="img/catalog-image/cat-energy-pro-1000g-chicken.jpg"
+                    width="84" height="100" alt="Изображение коробочки с питанием - курица 1000г">
+                </a>
+              </div>
+              <div class="catalog__wrapper-auxiliary-column-2">
+                <a class="product-card__link" href="">
+                  <h3 class="product-card__product-name">
+                    <span>Cat energy pro 1000 г</span>
+                  </h3>
+                </a>
+                <table class="product-card__product-table">
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Масса</th>
+                    <th class="product-card__table-cell">1000 г</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Вкус</th>
+                    <th class="product-card__table-cell">Курица</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Цена</th>
+                    <th class="product-card__table-cell">1000 &#8381;</th>
+                  </tr>
+                </table>
+              </div>
+              <div class="catalog__wrapper-auxiliary-row">
+                <a class="product-card__link product-card__link--buy" href=""
+                  aria-label="Перейти на страницу оформления товара">Заказать</a>
+              </div>
             </article>
           </li>
 
           <li class="catalog__item">
             <article class="product-card">
-              <a class="product-card__link" href="">
-                <h3 class="product-card__product-name">
-                  <span>Cat energy pro 500 г</span>
-                </h3>
-                <img class="product-card__product-image" src="img/catalog-image/cat-energy-pro-500g-fish.jpg" width="68"
-                  height="86" alt="Изображение коробочки с питанием - рыба 500г">
-              </a>
-              <table class="product-card__product-table">
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Масса</th>
-                  <th class="product-card__table-cell">500 г</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Вкус</th>
-                  <th class="product-card__table-cell">Рыба</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Цена</th>
-                  <th class="product-card__table-cell">700 &#8381;</th>
-                </tr>
-              </table>
-              <a class="product-card__link product-card__link--buy" href=""
-                aria-label="Перейти на страницу оформления товара">Заказать</a>
+              <div class="catalog__wrapper-auxiliary-column-1">
+                <a class="product-card__link" href="">
+                  <img class="product-card__product-image" src="img/catalog-image/cat-energy-pro-500g-fish.jpg"
+                    width="68" height="78" alt="Изображение коробочки с питанием - рыба 500г">
+                </a>
+              </div>
+              <div class="catalog__wrapper-auxiliary-column-2">
+                <a class="product-card__link" href="">
+                  <h3 class="product-card__product-name">
+                    <span>Cat energy pro 500 г</span>
+                  </h3>
+                </a>
+                <table class="product-card__product-table">
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Масса</th>
+                    <th class="product-card__table-cell">500 г</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Вкус</th>
+                    <th class="product-card__table-cell">Рыба</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Цена</th>
+                    <th class="product-card__table-cell">700 &#8381;</th>
+                  </tr>
+                </table>
+              </div>
+              <div class="catalog__wrapper-auxiliary-row">
+                <a class="product-card__link product-card__link--buy" href=""
+                  aria-label="Перейти на страницу оформления товара">Заказать</a>
+              </div>
             </article>
           </li>
 
           <li class="catalog__item">
             <article class="product-card">
-              <a class="product-card__link" href="">
-                <h3 class="product-card__product-name">
-                  <span>Cat energy pro 1000 г</span>
-                </h3>
-                <img class="product-card__product-image" src="img/catalog-image/cat-energy-pro-1000g-fish.jpg"
-                  width="68" height="86" alt="Изображение коробочки с питанием - рыба 1000г">
-              </a>
-              <table class="product-card__product-table">
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Масса</th>
-                  <th class="product-card__table-cell">1000 г</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Вкус</th>
-                  <th class="product-card__table-cell">Рыба</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Цена</th>
-                  <th class="product-card__table-cell">1000 &#8381;</th>
-                </tr>
-              </table>
-              <a class="product-card__link product-card__link--buy" href=""
-                aria-label="Перейти на страницу оформления товара">Заказать</a>
+              <div class="catalog__wrapper-auxiliary-column-1">
+                <a class="product-card__link" href="">
+                  <img class="product-card__product-image" src="img/catalog-image/cat-energy-pro-1000g-fish.jpg"
+                    width="84" height="100" alt="Изображение коробочки с питанием - рыба 1000г">
+                </a>
+              </div>
+              <div class="catalog__wrapper-auxiliary-column-2">
+                <a class="product-card__link" href="">
+                  <h3 class="product-card__product-name">
+                    <span>Cat energy pro 1000 г</span>
+                  </h3>
+                </a>
+                <table class="product-card__product-table">
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Масса</th>
+                    <th class="product-card__table-cell">1000 г</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Вкус</th>
+                    <th class="product-card__table-cell">Рыба</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Цена</th>
+                    <th class="product-card__table-cell">1000 &#8381;</th>
+                  </tr>
+                </table>
+              </div>
+              <div class="catalog__wrapper-auxiliary-row">
+                <a class="product-card__link product-card__link--buy" href=""
+                  aria-label="Перейти на страницу оформления товара">Заказать</a>
+              </div>
             </article>
           </li>
 
           <li class="catalog__item">
             <article class="product-card">
-              <a class="product-card__link" href="">
-                <h3 class="product-card__product-name">
-                  <span>Cat energy slim 500 г</span>
-                </h3>
-                <img class="product-card__product-image" src="img/catalog-image/cat-energy-slim-500g-buckwheat.jpg"
-                  width="68" height="86" alt="Изображение коробочки с питанием - гречка 500г">
-              </a>
-              <table class="product-card__product-table">
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Масса</th>
-                  <th class="product-card__table-cell">500 г</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Вкус</th>
-                  <th class="product-card__table-cell">Гречка</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Цена</th>
-                  <th class="product-card__table-cell">400 &#8381;</th>
-                </tr>
-              </table>
-              <a class="product-card__link product-card__link--buy" href=""
-                aria-label="Перейти на страницу оформления товара">Заказать</a>
+              <div class="catalog__wrapper-auxiliary-column-1">
+                <a class="product-card__link" href="">
+                  <img class="product-card__product-image" src="img/catalog-image/cat-energy-slim-500g-buckwheat.jpg"
+                    width="68" height="78" alt="Изображение коробочки с питанием - гречка 500г">
+                </a>
+              </div>
+              <div class="catalog__wrapper-auxiliary-column-2">
+                <a class="product-card__link" href="">
+                  <h3 class="product-card__product-name">
+                    <span>Cat energy slim 500 г</span>
+                  </h3>
+                </a>
+                <table class="product-card__product-table">
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Масса</th>
+                    <th class="product-card__table-cell">500 г</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Вкус</th>
+                    <th class="product-card__table-cell">Гречка</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Цена</th>
+                    <th class="product-card__table-cell">400 &#8381;</th>
+                  </tr>
+                </table>
+              </div>
+              <div class="catalog__wrapper-auxiliary-row">
+                <a class="product-card__link product-card__link--buy" href=""
+                  aria-label="Перейти на страницу оформления товара">Заказать</a>
+              </div>
             </article>
           </li>
 
           <li class="catalog__item">
             <article class="product-card">
-              <a class="product-card__link" href="">
-                <h3 class="product-card__product-name">
-                  <span>Cat energy slim 1000 г</span>
-                </h3>
-                <img class="product-card__product-image" src="img/catalog-image/cat-energy-slim-1000g-buckwheat.jpg"
-                  width="68" height="86" alt="Изображение коробочки с питанием - гречка 1000г">
-              </a>
-              <table class="product-card__product-table">
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Масса</th>
-                  <th class="product-card__table-cell">1000 г</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Вкус</th>
-                  <th class="product-card__table-cell">Гречка</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Цена</th>
-                  <th class="product-card__table-cell">700 &#8381;</th>
-                </tr>
-              </table>
-              <a class="product-card__link product-card__link--buy" href=""
-                aria-label="Перейти на страницу оформления товара">Заказать</a>
+              <div class="catalog__wrapper-auxiliary-column-1">
+                <a class="product-card__link" href="">
+                  <img class="product-card__product-image" src="img/catalog-image/cat-energy-slim-1000g-buckwheat.jpg"
+                    width="84" height="100" alt="Изображение коробочки с питанием - гречка 1000г">
+                </a>
+              </div>
+              <div class="catalog__wrapper-auxiliary-column-2">
+                <a class="product-card__link" href="">
+                  <h3 class="product-card__product-name">
+                    <span>Cat energy slim 1000 г</span>
+                  </h3>
+                </a>
+                <table class="product-card__product-table">
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Масса</th>
+                    <th class="product-card__table-cell">1000 г</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Вкус</th>
+                    <th class="product-card__table-cell">Гречка</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Цена</th>
+                    <th class="product-card__table-cell">700 &#8381;</th>
+                  </tr>
+                </table>
+              </div>
+              <div class="catalog__wrapper-auxiliary-row">
+                <a class="product-card__link product-card__link--buy" href=""
+                  aria-label="Перейти на страницу оформления товара">Заказать</a>
+              </div>
             </article>
           </li>
 
           <li class="catalog__item">
             <article class="product-card">
-              <a class="product-card__link" href="">
-                <h3 class="product-card__product-name">
-                  <span>Cat energy slim 500 г</span>
-                </h3>
-                <img class="product-card__product-image" src="img/catalog-image/cat-energy-slim-500g-rice.jpg"
-                  width="68" height="86" alt="Изображение коробочки с питанием - рис 500г">
-              </a>
-              <table class="product-card__product-table">
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Масса</th>
-                  <th class="product-card__table-cell">500 г</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Вкус</th>
-                  <th class="product-card__table-cell">Рис</th>
-                </tr>
-                <tr class="product-card__table-line">
-                  <th class="product-card__table-cell">Цена</th>
-                  <th class="product-card__table-cell">500 &#8381;</th>
-                </tr>
-              </table>
-              <a class="product-card__link product-card__link--buy" href=""
-                aria-label="Перейти на страницу оформления товара">Заказать</a>
+              <div class="catalog__wrapper-auxiliary-column-1">
+                <a class="product-card__link" href="">
+                  <img class="product-card__product-image" src="img/catalog-image/cat-energy-slim-500g-rice.jpg"
+                    width="72" height="84" alt="Изображение коробочки с питанием - рис 500г">
+                </a>
+              </div>
+              <div class="catalog__wrapper-auxiliary-column-2">
+                <a class="product-card__link" href="">
+                  <h3 class="product-card__product-name">
+                    <span>Cat energy slim 500 г</span>
+                  </h3>
+                </a>
+                <table class="product-card__product-table">
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Масса</th>
+                    <th class="product-card__table-cell">500 г</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Вкус</th>
+                    <th class="product-card__table-cell">Рис</th>
+                  </tr>
+                  <tr class="product-card__table-line">
+                    <th class="product-card__table-cell">Цена</th>
+                    <th class="product-card__table-cell">500 &#8381;</th>
+                  </tr>
+                </table>
+              </div>
+              <div class="catalog__wrapper-auxiliary-row">
+                <a class="product-card__link product-card__link--buy" href=""
+                  aria-label="Перейти на страницу оформления товара">Заказать</a>
+              </div>
             </article>
           </li>
 
           <li class="catalog__item">
             <article class="product-card product-card--show-more">
               <a class="product-card__link" href="">
-                <h3 class="product-card__product-name product-card__product-name--icon">
-                  <span>Показать еще 100500 товаров</span>
-                </h3>
+                <h3 class="product-card__product-name product-card__product-name--icon">Показать еще 100500 товаров</h3>
               </a>
               <p class="product-card__show-more-text">На самом деле вкусов гораздо больше!</p>
               <button class="button button--show-more" type="button"
@@ -244,67 +305,57 @@
     </section>
 
     <section class="adaptive-additionally-mobile">
-      <h3 class="adaptive-additionally-mobile__tittle">Дополнительные товары</h3>
+      <div class="adaptive-additionally-mobile__title-wrapper">
+        <h3 class="adaptive-additionally-mobile__title">Дополнительные товары</h3>
+      </div>
       <div class="adaptive-additionally-mobile__wrapper">
-        <!--grid-->
-        <div class="adaptive-mobile-addproduct">
-          <p class="adaptive-mobile-addproduct__head">Сахарозаменитель</p>
-          <div class="adaptive-mobile-addproduct__inner">
-            <p class="adaptive-mobile-addproduct__text">1 упаковка (100 г)</p>
-            <p class="adaptive-mobile-addproduct__text">200 Р.</p>
-          </div>
-          <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
-            aria-label="Перейти на страницу оформления товара">Заказать</a>
+        <p class="adaptive-additionally-mobile__head">Сахарозаменитель</p>
+        <div class="adaptive-additionally-mobile__inner">
+          <p class="adaptive-additionally-mobile__text">1 упаковка (100 г)</p>
+          <p class="adaptive-additionally-mobile__text">200 Р.</p>
         </div>
+        <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
+          aria-label="Перейти на страницу оформления товара">Заказать</a>
       </div>
 
       <div class="adaptive-additionally-mobile__wrapper">
-        <!--grid-->
-        <div class="adaptive-mobile-addproduct">
-          <p class="adaptive-mobile-addproduct__head">Питьевая вода</p>
-          <div class="adaptive-mobile-addproduct__inner">
-            <p class="adaptive-mobile-addproduct__text">5 литров</p>
-            <p class="adaptive-mobile-addproduct__text">50 Р.</p>
-          </div>
-          <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
-            aria-label="Перейти на страницу оформления товара">Заказать</a>
+        <p class="adaptive-additionally-mobile__head">Питьевая вода</p>
+        <div class="adaptive-additionally-mobile__inner">
+          <p class="adaptive-additionally-mobile__text">5 литров</p>
+          <p class="adaptive-additionally-mobile__text">50 Р.</p>
         </div>
+        <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
+          aria-label="Перейти на страницу оформления товара">Заказать</a>
       </div>
 
       <div class="adaptive-additionally-mobile__wrapper">
-        <!--grid-->
-        <div class="adaptive-mobile-addproduct">
-          <p class="adaptive-mobile-addproduct__head">Молоко</p>
-          <div class="adaptive-mobile-addproduct__inner">
-            <p class="adaptive-mobile-addproduct__text">1 литр</p>
-            <p class="adaptive-mobile-addproduct__text">100 Р.</p>
-          </div>
-          <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
-            aria-label="Перейти на страницу оформления товара">Заказать</a>
+        <p class="adaptive-additionally-mobile__head">Молоко</p>
+        <div class="adaptive-additionally-mobile__inner">
+          <p class="adaptive-additionally-mobile__text">1 литр</p>
+          <p class="adaptive-additionally-mobile__text">100 Р.</p>
         </div>
+        <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
+          aria-label="Перейти на страницу оформления товара">Заказать</a>
       </div>
 
       <div class="adaptive-additionally-mobile__wrapper">
-        <!--grid-->
-        <div class="adaptive-mobile-addproduct">
-          <p class="adaptive-mobile-addproduct__head">Витамины</p>
-          <div class="adaptive-mobile-addproduct__inner">
-            <p class="adaptive-mobile-addproduct__text">1 упаковка (30 г)</p>
-            <p class="adaptive-mobile-addproduct__text">300 Р.</p>
-          </div>
-          <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
-            aria-label="Перейти на страницу оформления товара">Заказать</a>
+        <p class="adaptive-additionally-mobile__head">Витамины</p>
+        <div class="adaptive-additionally-mobile__inner">
+          <p class="adaptive-additionally-mobile__text">1 упаковка (30 г)</p>
+          <p class="adaptive-additionally-mobile__text">300 Р.</p>
         </div>
+        <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
+          aria-label="Перейти на страницу оформления товара">Заказать</a>
       </div>
     </section>
 
-    <aside class="advertising advertising--icon">
-      <p class="advertising__text">Закажите все и получите чехол для кота в подарок!</p>
+    <aside class="advertising">
+      <p class="advertising__text">Закажите все<br> и получите чехол для кота в подарок!</p>
     </aside>
 
-    <section class="location">
+    <section class="location location--catalog">
       <div class="location__wrapper">
-        <h3 class="location__appeal">Приглашаем к сотрудничеству дилеров!</h3>
+        <h3 class="location__appeal">Приглашаем<br> к сотрудничеству дилеров!</h3>
         <p class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
     </section>
@@ -319,20 +370,27 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__text">
         <p class="page-footer__contacts-text">
-          Cat energy
+          <img class="page-footer__cap-text-image" src="img/logo-text-header.svg" width="128" height="24"
+            alt="текст: cat energy">
         </p>
       </div>
 
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a aria-label="перейти в группу vkontakte" class="social__link social__link--vkontakte" href="#"></a>
+            <a aria-label="перейти в группу vkontakte" href="#">
+              <img class="social__item-image" src="img/icon_vkontakte.svg" width="23" height="16" alt="">
+            </a>
           </li>
           <li class="social__item">
-            <a aria-label="перейти в instagram" class="social__link social__link--instagram" href="#"></a>
+            <a aria-label="перейти в instagram" href="#">
+              <img class="social__item-image" src="img/icon_instagram.svg" width="16" height="16" alt="">
+            </a>
           </li>
           <li class="social__item">
-            <a aria-label="перейти в facebook" class="social__link social__link--facebook" href="#"></a>
+            <a aria-label="перейти в facebook" href="#">
+              <img class="social__item-image" src="img/icon_facebook.svg" width="22" height="22" alt="">
+            </a>
           </li>
         </ul>
       </div>
@@ -350,6 +408,7 @@
       </div>
     </div>
   </footer>
+
 
 </body>
 
