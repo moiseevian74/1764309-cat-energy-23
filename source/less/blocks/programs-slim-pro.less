@@ -1,6 +1,10 @@
 .programs-slim-pro {
   width: @second-width;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
 }
 
 .programs-slim-pro__wrapper {
@@ -9,6 +13,14 @@
   margin: 20px auto;
   grid-template-rows: 74px 1fr 57px;
   background-color: @programs-backgound-color;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    min-height: 372px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 30px;
+  }
 }
 
 .programs-slim-pro__title {
@@ -22,6 +34,13 @@
   font-weight: @base-font-weight;
   color: @base-text-heading-color;
   text-transform: @text-transfrom-up;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    width: 340px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .programs-slim-pro__title--slim {
@@ -30,7 +49,7 @@
   padding-top: 30px;
   padding-left: 91px;
   padding-bottom: 9px;
-  padding-right: 79px;
+  padding-right: 52px;
 
   &::before {
     content: "";
@@ -41,6 +60,19 @@
     left: 22px;
     background-image: url("../img/cat_slim-logo.svg");
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 340px;
+    padding-top: 82px;
+    padding-left: 53px;
+    padding-bottom: 2px;
+    padding-right: 79px;
+
+    &::before {
+      top: 24px;
+      left: 446px;
+    }
   }
 }
 
@@ -62,6 +94,19 @@
     background-image: url("../img/cat_pro-logo.svg");
     background-repeat: no-repeat;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 340px;
+    padding-top: 82px;
+    padding-left: 53px;
+    padding-bottom: 2px;
+    padding-right: 79px;
+
+    &::before {
+      top: 24px;
+      left: 446px;
+    }
+  }
 }
 
 .programs-slim-pro__description {
@@ -69,6 +114,14 @@
   margin: 23px 20px 0 20px;
   padding-bottom: 22px;
   border-bottom: 1px solid @border-second-color;
+
+  @media (min-width: @tablet-width) {
+    width: 340px;
+    text-align: left;
+    margin-bottom: 8px;
+    border-bottom: none;
+    margin-left: 52px;
+  }
 }
 
 .programs-slim-pro__link {
@@ -78,7 +131,7 @@
   min-height: 18px;
   position: relative;
   top: 20px;
-  left: 20px;
+  left: 52px;
   text-transform: @text-transfrom-up;
   font-family: @second-base-font;
   font-size: 16px;
@@ -106,5 +159,17 @@
   &:focus::after {
     .focus();
     transform: scale(1.4, 1);
+  }
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    width: 340px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      top: 7px;
+      left: 131px;
+    }
   }
 }

@@ -1,6 +1,10 @@
 .location {
   width: @page-width;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
 }
 
 .location--inner-page {
@@ -15,6 +19,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    min-height: 178px;
+    padding-bottom: 0;
+  }
 }
 
 .location__appeal {
@@ -26,8 +36,26 @@
   text-transform: @text-transfrom-up;
   font-family: @second-base-font;
   font-weight: @base-font-weight;
+
+  @media (min-width: @tablet-width) {
+    width: 171px;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 44px;
+    padding-left: 42px;
+  }
 }
 
 .location__address {
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 159px;
+    text-align: right;
+    padding-top: 25px;
+    padding-left: 42px;
+    padding-right: 42px;
+    display: block;
+    justify-self: end;
+  }
 }

@@ -1,15 +1,30 @@
 .welcome {
   min-height: 480px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    min-height: 830px;
+    background: url("../../img/tablet-image/welcome-background-can.jpg") no-repeat  28px 227px;
+    background-size: 709px 609px;
+  }
 }
 
 .welcome__wrapper {
+  margin: 0 auto;
+  padding: 0;
   width: @page-width;
-  text-align: center;
   //#68b738 фоновый цвет
   background: url("../img/background-welcome-main.jpg") no-repeat border-box;
   background-size: 320px 302px;
   font-family: @second-base-font;
   box-sizing: border-box;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    background: none;
+    text-align: left;
+  }
 }
 
 .welcome__heading-h1 {
@@ -17,10 +32,19 @@
   line-height: @h1-font-line-height;
   color: @h1-mobile-color;
   font-weight: @base-font-weight;
-  margin: 0 auto;
+  margin: 0 auto 25px;
   padding-top: 25px;
-  padding-bottom: 25px;
   text-transform: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @base-text-heading-color;
+    text-align: initial;
+    width: 414px;
+    margin-left: 87px;
+    margin-bottom: 41px;
+  }
 }
 
 .welcome__description-contents {
@@ -29,6 +53,21 @@
   color: @basic-white;
   padding-bottom: 26px;
   text-transform: @text-transfrom-up;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @base-text-heading-color;
+    margin-left: 89px;
+    margin-bottom: 23px;
+    width: 283px;
+  }
+}
+
+.welcome__image {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .welcome__link {
@@ -49,5 +88,15 @@
 
   &:focus {
     color: @hover-base-color;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    font-size: 20px;
+    line-height: 20px;
+    min-height: 54px;
+    padding-top: 17px;
+    text-align: center;
+    margin-left: 90px;
   }
 }
