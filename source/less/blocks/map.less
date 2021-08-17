@@ -1,10 +1,30 @@
 .map {
   margin: 0 auto;
   width: @page-width;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 768px;
     min-height: 400px;
     text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
+}
+
+.map__image {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.map__image--desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: initial;
+    height: 400px;
   }
 }

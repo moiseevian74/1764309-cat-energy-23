@@ -4,12 +4,19 @@
   @media (min-width: @tablet-width) {
     width: 768px;
     min-height: 830px;
-    background: url("../../img/tablet-image/welcome-background-can.jpg") no-repeat  28px 227px;
+    background: url("../img/tablet-image/welcome-background-can.jpg") no-repeat  28px 227px;
     background-size: 709px 609px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    min-height: 654px;
+    background: url("../img/desktop-image/desktop-welcome-can-back.png") no-repeat  559px 19px;
   }
 }
 
 .welcome__wrapper {
+  position: relative;
   margin: 0 auto;
   padding: 0;
   width: @page-width;
@@ -24,6 +31,23 @@
     width: 708px;
     background: none;
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 708px;
+    text-align: left;
+    margin: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -122px;
+      left: 102%;
+      width: 720px;
+      height: 694px;
+      background: url("../img/desktop-image/desktop-welcome-background.jpg") no-repeat;
+    }
   }
 }
 
@@ -45,6 +69,12 @@
     margin-left: 87px;
     margin-bottom: 41px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 101px;
+    margin-left: 190px;
+    margin-bottom: 41px;
+  }
 }
 
 .welcome__description-contents {
@@ -61,6 +91,11 @@
     margin-left: 89px;
     margin-bottom: 23px;
     width: 283px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 190px;
+    margin-bottom: 25px;
   }
 }
 
@@ -98,5 +133,9 @@
     padding-top: 17px;
     text-align: center;
     margin-left: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 190px;
   }
 }

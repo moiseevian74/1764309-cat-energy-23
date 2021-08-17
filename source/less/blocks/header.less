@@ -15,6 +15,8 @@
 
   @media (min-width: @desktop-width) {
     width: 1440px;
+    min-height: 115px;
+    background-color: initial;
   }
 }
 
@@ -54,11 +56,20 @@
   @media (min-width: @tablet-width) {
     width: 45px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 52px;
+  }
 }
 
 .page-header__cap-text {
   @media (min-width: @tablet-width) {
     padding-top: 28px;
+    padding-left: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 48px;
     padding-left: 27px;
   }
 }
@@ -113,7 +124,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
+    width: 1040px;
   }
 }
 
@@ -139,6 +150,11 @@
 
   @media (min-width: @desktop-width) {
     border: none;
+
+    &:first-child {
+      padding-left: 526px;
+      padding-top: 48px;
+    }
   }
 }
 
@@ -167,6 +183,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    border: none;
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 0;
+    padding-left: 34px;
   }
 }

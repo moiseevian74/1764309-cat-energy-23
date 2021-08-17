@@ -5,6 +5,16 @@
   @media (min-width: @tablet-width) {
     width: 768px;
   }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 570px;
+    min-height: 201px;
+    top: 94px;
+    left: 109px;
+    z-index: 1;
+    background-color: @base-background-color;
+  }
 }
 
 .location--inner-page {
@@ -25,6 +35,12 @@
     min-height: 178px;
     padding-bottom: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    min-height: 201px;
+    background-color: @base-background-color;
+  }
 }
 
 .location__appeal {
@@ -44,6 +60,14 @@
     padding-top: 44px;
     padding-left: 42px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 171px;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 68px;
+    padding-left: 76px;
+  }
 }
 
 .location__address {
@@ -57,5 +81,19 @@
     padding-right: 42px;
     display: block;
     justify-self: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 171px;
+    font-size: 16px;
+    line-height: 21px;
+    padding-top: 47px;
+    padding-left: 11px;
+    text-align: left;
+    justify-self: center;
+
+    & span {
+      line-height: 58px;
+    }
   }
 }
