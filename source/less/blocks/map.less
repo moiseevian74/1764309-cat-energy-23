@@ -15,16 +15,22 @@
 }
 
 .map__image {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+  }
+
   @media (min-width: @desktop-width) {
     display: none;
   }
 }
 
-.map__image--desktop {
+.map__desktop {
   display: none;
 
   @media (min-width: @desktop-width) {
-    display: initial;
+    display: block;
     height: 400px;
   }
 }

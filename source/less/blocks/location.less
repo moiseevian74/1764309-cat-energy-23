@@ -20,6 +20,14 @@
 .location--inner-page {
   background-color: @footer-backgound-color;
   padding-top: 14px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .location__wrapper {
@@ -81,6 +89,10 @@
     padding-right: 42px;
     display: block;
     justify-self: end;
+
+    & span {
+      line-height: 58px;
+    }
   }
 
   @media (min-width: @desktop-width) {

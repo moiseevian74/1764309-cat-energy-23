@@ -2,12 +2,34 @@
   width: @page-width;
   margin: 0 auto;
   background-color: @base-background-color;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: 1440px;
+
+    & div:nth-of-type(2) {
+      border-top: 1px solid @border-base-color;
+    }
+  }
 }
 
 .adaptive-additionally-mobile__title-wrapper {
   width: @page-width;
   margin: 0 auto;
   border-bottom: 1px solid @border-base-color;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    border-bottom: none;
+  }
 }
 
 .adaptive-additionally-mobile__title {
@@ -16,11 +38,25 @@
   padding-top: 25px;
   padding-bottom: 34px;
   padding-left: 20px;
+  padding-right: 20px;
   font-size: @h3-font-size;
   font-weight: @base-font-weight;
   line-height: @h3-font-second-line-height;
   color: @base-text-heading-color;
   font-family: @second-base-font;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 68px;
+    padding-bottom: 80px;
+    padding-left: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 75px;
+    padding-left: 0;
+  }
 
   &::after {
     content: "";
@@ -29,6 +65,18 @@
     top: 39px;
     left: 266px;
     border-bottom: 2px solid @button-base-backgound-color;
+
+    @media (min-width: @tablet-width) {
+      width: 328px;
+      top: 89px;
+      left: 410px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 957px;
+      top: 98px;
+      left: 373px;
+    }
   }
 }
 
@@ -38,6 +86,36 @@
   width: @second-width;
   border-bottom: 1px solid @border-base-color;
   min-height: 130px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    min-height: 114px;
+
+    & div:nth-child(1) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-left: 39px;
+      margin-top: 25px;
+      margin-bottom: 5px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 895px;
+      display: inline-flex;
+      justify-content: space-between;
+      min-height: 72px;
+      align-items: center;
+      margin-left: 111px;
+      flex-direction: row;
+
+      & div:nth-child(1) {
+        display: initial;
+        margin: 0;
+      }
+    }
+  }
 }
 
 .adaptive-additionally-mobile__link {
@@ -54,6 +132,18 @@
   font-family: @second-base-font;
   line-height: @button-line-height;
   background-color: @button-base-backgound-color;
+
+  @media (min-width: @tablet-width) {
+    width: 632px;
+    min-height: 40px;
+    margin: 0 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    min-height: 40px;
+    margin: 0;
+  }
 
   &:hover {
     background-color: @hover-base-background-color;
@@ -73,11 +163,29 @@
   line-height: @mobile-addproduct-head-line-height;
   color: @base-text-heading-color;
   text-transform: @text-transfrom-up;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 65px;
+    display: inline-block;
+    width: 255px;
+  }
 }
 
 .adaptive-additionally-mobile__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (min-width: @desktop-width) {
+    display: initial;
+    grid-template-columns: none;
+  }
 }
 
 .adaptive-additionally-mobile__text {
@@ -85,7 +193,35 @@
   line-height: 14px;
   padding-bottom: 15px;
 
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 132px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    display: inline-block;
+  }
+
   &:nth-child(2) {
     text-align: right;
+
+    @media (min-width: @tablet-width) {
+      text-align: center;
+      padding-left: 11px;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: inline-block;
+      width: 70px;
+      text-align: left;
+      box-sizing: initial;
+      padding-left: 107px;
+      padding-top: 20px;
+      padding-right: 10px;
+    }
   }
 }

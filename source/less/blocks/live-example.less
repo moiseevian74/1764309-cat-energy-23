@@ -195,6 +195,7 @@
   font-family: @second-base-font;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     display: inline-block;
     margin: 0 auto;
     padding: 0;
@@ -202,6 +203,7 @@
     width: 174px;
     font-size: 20px;
     margin-left: 121px;
+    top: 11px;
   }
 
   @media (min-width: @desktop-width) {
@@ -209,11 +211,15 @@
     margin: 0;
     text-align: left;
     width: 380px;
-    padding-top: 50px;
+    padding-top: 32px;
   }
 }
 
-.live-example__food-price--price {
+.live-example__decoration {
+  @media (min-width: @tablet-width) {
+    line-height: 34px;
+  }
+
   @media (min-width: @desktop-width) {
     padding-left: 59px;
   }
@@ -262,6 +268,16 @@
     @media (min-width: @tablet-width) {
       margin-top: -7px;
       padding-left: 49px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 13px;
+        left: 140px;
+        width: 428px;
+        border-bottom: 6px solid @slider-color;
+        border-radius: 6px;
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -291,6 +307,21 @@
     @media (min-width: @tablet-width) {
       margin-top: -10px;
       padding-left: 19px;
+      grid-column: ~"3/4";
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: -234px;
+        height: 38px;
+        width: 38px;
+        background: url("../img/desktop-image/slider-control.png") no-repeat;
+      }
+
+      &:hover::before {
+        transform: scale(1.2);
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -342,7 +373,13 @@
 }
 
 .slider__image {
-  display: none;
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .slider__image--toggle { //mobile

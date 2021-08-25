@@ -144,7 +144,7 @@
     &:first-child {
       border: none;
       padding-left: 60px;
-      padding-top: 20px;
+      padding-top: 18px;
     }
   }
 
@@ -154,6 +154,7 @@
     &:first-child {
       padding-left: 526px;
       padding-top: 48px;
+      padding-bottom: 16px;
     }
   }
 }
@@ -163,7 +164,7 @@
   display: block;
   box-sizing: border-box;
   border-bottom: 1px solid @border-base-color;
-  min-height: 66px;
+  min-height: 58px;
   padding-top: 22px;
   padding-bottom: 22px;
   padding-left: 5px;
@@ -179,13 +180,61 @@
     line-height: 24px;
     font-weight: @base-font-weight;
     padding-right: 0;
-    padding-left: 35px;
+    margin-left: 35px;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-top: 15px;
+    min-height: 48px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:not([href]) {
+      border-bottom: 2px solid @active-base;
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 29px;
     padding-right: 0;
-    padding-left: 34px;
+    margin-left: 34px;
+    color: @basic-white;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:not([href]) {
+      border-bottom: 2px solid @active-second;
+    }
+  }
+}
+
+.site-list__link--color {
+  @media (min-width: @desktop-width) {
+    color: @base-text-heading-color;
+    padding-bottom: 4px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:not([href]) {
+      border-bottom: 2px solid @active-base;
+    }
   }
 }
