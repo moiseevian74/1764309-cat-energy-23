@@ -1,21 +1,25 @@
 .live-example {
-  width: @page-width;
+  min-width: @page-width;
   margin: 0 auto;
   background-color: @second-base-background-color;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
-    background: url("../img/tablet-image/live-example-background.png") no-repeat 0 602px;
-    background-color: @base-background-color;
+    width: 100%;
+    background: linear-gradient(to right, #eaeaea 50%, #eaeaea 50%) no-repeat;
+    background-size: 100% 462px;
+    background-position: 0 602px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
-    background: url("../img/desktop-image/live-example-grey-background-color.jpg") no-repeat 0 136px;
+    min-width: 1440px;
+    background: linear-gradient(to right, #f2f2f2 72.5%, #eaeaea 72.5%) no-repeat;
+    background-size: 100% 462px;
+    background-position: 0 136px;
   }
 }
 
 .live-example__wrapper {
+  position: relative;
   width: @second-width;
   margin: 0 auto;
   box-sizing: border-box;
@@ -30,6 +34,18 @@
     grid-template-columns: 610px 1fr;
     grid-template-rows: 199px 173px 82px 143px;
     min-height: 598px;
+
+    &::after {
+      z-index: 0;
+      position: absolute;
+      content: "";
+      width: 395px;
+      height: 462px;
+      top: 136px;
+      left: 934px;
+      background: url("../img/desktop-image/rectangle.jpg");
+      background-color: initial;
+    }
   }
 }
 
@@ -230,10 +246,15 @@
   padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 auto;
-    width: 708px;
-    min-height: 550px;
-    padding-bottom: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 690px;
+    height: 557px;
+    background: url("../img/desktop-image/image-two-cats-desktop.png") no-repeat;
+    padding-left: 690px;
+    margin-left: 16px;
+    margin-top: 31px;
+    margin-bottom: -31px;
   }
 
   @media (min-width: @desktop-width) {
@@ -250,12 +271,13 @@
 
   &::before {
     @media (min-width: @desktop-width) {
+      z-index: 1;
       position: absolute;
       content: "";
       top: -528px;
       left: -40px;
       width: 690px;
-      height: 656px;
+      height: 550px;
       background: url("../img/desktop-image/image-two-cats-desktop.png") no-repeat;
     }
   }
@@ -270,6 +292,7 @@
       padding-left: 49px;
 
       &::after {
+        z-index: 1;
         position: absolute;
         content: "";
         top: 13px;
@@ -310,6 +333,7 @@
       grid-column: ~"3/4";
 
       &::before {
+        z-index: 1;
         position: absolute;
         content: "";
         top: 0;
@@ -325,11 +349,13 @@
     }
 
     @media (min-width: @desktop-width) {
+      z-index: 1;
       padding-top: 36px;
       grid-column: ~"3/4";
       text-decoration: underline dotted @slider-color;
 
       &::before {
+        z-index: 1;
         position: absolute;
         content: "";
         top: 35px;

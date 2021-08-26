@@ -1,8 +1,11 @@
 .welcome {
+  position: relative;
+  min-width: @page-width;
+  margin: 0 auto;
   min-height: 480px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: 708px;
     min-height: 830px;
     background: url("../img/tablet-image/welcome-background-can.jpg") no-repeat  28px 227px;
     background-size: 709px 609px;
@@ -16,11 +19,9 @@
 }
 
 .welcome__wrapper {
-  position: relative;
   margin: 0 auto;
   padding: 0;
-  width: @page-width;
-  //#68b738 фоновый цвет
+  width: @second-width;
   background: url("../img/background-welcome-main.jpg") no-repeat border-box;
   background-size: 320px 302px;
   font-family: @second-base-font;
@@ -36,19 +37,7 @@
   @media (min-width: @desktop-width) {
     width: 1440px;
     text-align: left;
-    margin: 0 auto;
-
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: -122px;
-      left: 50%;
-      width: 720px;
-      height: 694px;
-      background: url("../img/desktop-image/desktop-welcome-background.jpg") no-repeat right;
-      background-color: @welcome-background-color;
-    }
+    margin: -30px auto;
   }
 }
 

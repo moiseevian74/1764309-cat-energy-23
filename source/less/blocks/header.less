@@ -1,6 +1,6 @@
 .page-header {
   min-height: 65px;
-  width: @page-width;
+  min-width: @page-width;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -9,14 +9,35 @@
   text-transform: @text-transfrom-up;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    max-width: 100%;
     min-height: 115px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
-    min-height: 115px;
+    min-height: 145px;
     background-color: initial;
+  }
+}
+
+.page-header.page-header--background {
+  @media (min-width: @desktop-width) {
+    position: relative;
+
+    &::after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: -542px;
+      width: calc(100% / 2);
+      background-color: @welcome-background-color;
+      background-image: url("../img/desktop-image/desktop-welcome-background.jpg");
+      background-size: 720px auto;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
   }
 }
 
@@ -173,6 +194,18 @@
   font-size: @link-font-size;
   font-weight: @second-font-weight;
   line-height: @link-line-height;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:not([href]) {
+    border-bottom: 2px solid @active-base;
+  }
 
   @media (min-width: @tablet-width) {
     border: none;
