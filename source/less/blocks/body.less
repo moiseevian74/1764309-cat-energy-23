@@ -1,5 +1,5 @@
 .page__body {
-  width: @page-width;
+  min-width: @page-width;
   min-height: 100%;
   margin: 0 auto;
   padding: 0;
@@ -9,4 +9,14 @@
   font-weight: @base-font-weight;
   color: @base-text-color;
   background-color: @base-background-color;
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1440px;
+  }
 }

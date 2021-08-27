@@ -1,0 +1,36 @@
+.map {
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    min-height: 400px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.map__image {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.map__desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    height: 400px;
+  }
+}

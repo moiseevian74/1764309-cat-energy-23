@@ -1,6 +1,33 @@
+.page-main__desktop-container { //only desktop
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    & section:first-child {
+      text-align: left;
+      margin: 0;
+    }
+
+    & section:last-child {
+      justify-self: end;
+      margin: 0;
+    }
+  }
+}
+
 .programs-slim-pro {
   width: @second-width;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
 }
 
 .programs-slim-pro__wrapper {
@@ -9,6 +36,22 @@
   margin: 20px auto;
   grid-template-rows: 74px 1fr 57px;
   background-color: @programs-backgound-color;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    min-height: 372px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    box-sizing: border-box;
+    width: 570px;
+    min-height: 374px;
+    grid-template-rows: 150px 1fr 80px;
+  }
 }
 
 .programs-slim-pro__title {
@@ -22,6 +65,13 @@
   font-weight: @base-font-weight;
   color: @base-text-heading-color;
   text-transform: @text-transfrom-up;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    width: 340px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .programs-slim-pro__title--slim {
@@ -30,7 +80,7 @@
   padding-top: 30px;
   padding-left: 91px;
   padding-bottom: 9px;
-  padding-right: 79px;
+  padding-right: 52px;
 
   &::before {
     content: "";
@@ -41,6 +91,32 @@
     left: 22px;
     background-image: url("../img/cat_slim-logo.svg");
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 340px;
+    padding-top: 82px;
+    padding-left: 53px;
+    padding-bottom: 2px;
+    padding-right: 79px;
+
+    &::before {
+      top: 24px;
+      left: 446px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 164px;
+    padding-top: 77px;
+    padding-left: 214px;
+    padding-bottom: 5px;
+    padding-right: 80px;
+
+    &::before {
+      top: 72px;
+      left: 77px;
+    }
   }
 }
 
@@ -62,6 +138,32 @@
     background-image: url("../img/cat_pro-logo.svg");
     background-repeat: no-repeat;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 340px;
+    padding-top: 82px;
+    padding-left: 53px;
+    padding-bottom: 2px;
+    padding-right: 79px;
+
+    &::before {
+      top: 24px;
+      left: 446px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 206px;
+    padding-top: 77px;
+    padding-left: 214px;
+    padding-bottom: 5px;
+    padding-right: 80px;
+
+    &::before {
+      top: 69px;
+      left: 67px;
+    }
+  }
 }
 
 .programs-slim-pro__description {
@@ -69,6 +171,23 @@
   margin: 23px 20px 0 20px;
   padding-bottom: 22px;
   border-bottom: 1px solid @border-second-color;
+
+  @media (min-width: @tablet-width) {
+    width: 340px;
+    text-align: left;
+    margin-bottom: 8px;
+    border-bottom: none;
+    margin-left: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 467px;
+    text-align: left;
+    margin-top: 37px;
+    margin-bottom: 8px;
+    border-bottom: none;
+    margin-left: 52px;
+  }
 }
 
 .programs-slim-pro__link {
@@ -78,11 +197,15 @@
   min-height: 18px;
   position: relative;
   top: 20px;
-  left: 20px;
+  left: 52px;
   text-transform: @text-transfrom-up;
   font-family: @second-base-font;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: @desktop-width) {
+    top: -8px;
+  }
 
   &:focus {
     .focus();
@@ -106,5 +229,23 @@
   &:focus::after {
     .focus();
     transform: scale(1.4, 1);
+  }
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    width: 168px;
+    font-size: 20px;
+    line-height: 30px;
+    height: 30px;
+
+    &::after {
+      top: 7px;
+      left: 131px;
+
+      @media (min-width: @desktop-width) {
+        top: 8px;
+        left: 133px;
+      }
+    }
   }
 }

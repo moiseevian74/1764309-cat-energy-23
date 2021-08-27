@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico" type="image/svg+xml">
 </head>
 
 <body class="page__body">
@@ -15,20 +17,20 @@
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
       </a>
       <p class="page-header__cap-text">
-        <a href="index.html"><img class="page-header__cap-text-image" src="img/logo-text-header.svg" width="101" height="18"
-          alt="текст: cat energy"></a>
+        <a href="index.html"><img class="page-header__cap-text-image" src="img/logo-text-header.svg" width="101"
+            height="18" alt="текст: cat energy"></a>
       </p>
       <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-    </div>
-    <nav class="main-nav">
-      <div class="main-nav__wrapper">
+      <nav class="main-nav">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
-          <li class="site-list__item"><a class="site-list__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="site-list__item"><a class="site-list__link">Подбор программы</a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--color" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--color" href="catalog.html">Каталог
+              продукции</a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--color">Подбор программы</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <main class="page-main">
@@ -61,7 +63,7 @@
           </div>
 
           <div class="program-form__border-bottom">
-            <fieldset class="program-form__divide">
+            <fieldset class="program-form__divide  program-form__divide--tablet">
               <div>
                 <input class="program-form__input-radio" type="radio" id="choice-slim" name="program" value="slim"
                   checked>
@@ -78,20 +80,20 @@
             </fieldset>
           </div>
 
-          <fieldset class="program-form__divide">
-            <h3 class="heading-h3">Контактные данные (владельца кота)</h3>
-            <div>
+          <fieldset class="program-form__divide program-form__divide--contacts">
+            <h3 class="heading-h3 heading-h3--contacts">Контактные данные (владельца кота)</h3>
+            <div class="program-form__email-wrapper program-form__email-wrapper--desktop">
               <label class="program-form__label program-form__label--icon-mail" for="email">E-mail:<sup>*</sup></label>
               <input class="program-form__input program-form__input--maxwidth" type="email" name="email"
                 placeholder="kuklachev@gmail.com" id="email" autocomplete="off">
             </div>
-            <div>
+            <div class="program-form__phone-wrapper program-form__phone-wrapper--desktop">
               <label class="program-form__label program-form__label--icon-phone"
                 for="cat-weight">Телефон:<sup>*</sup></label>
               <input class="program-form__input program-form__input--maxwidth" type="tel" name="phone"
                 placeholder="8 (960) 900-60-90" id="phone" autocomplete="off">
             </div>
-            <h3 class="heading-h3 heading-h3--padding">Комментарий</h3>
+            <h3 class="heading-h3 heading-h3--comment">Комментарий</h3>
             <div>
               <label class="program-form__label-text-aria" for="comment"></label>
               <textarea class="program-form__text-aria" id="comment" name="comment"
@@ -99,9 +101,10 @@
             </div>
           </fieldset>
 
-          <fieldset class="program-form__divide">
-            <h3 class="heading-h3">Дополнительно</h3>
-            <ul class="program-form__list">
+
+          <fieldset class="program-form__divide program-form__divide--desktop">
+            <h3 class="heading-h3 heading-h3--add">Дополнительно</h3>
+            <ul class="program-form__list program-form__list--add">
               <li class="program-form__item">
                 <input class="program-form__input-checkbox" type="checkbox" name="sugar" id="sugar" checked>
                 <label class="program-form__label-checkbox" for="sugar">Сахарозаменитель</label>
@@ -121,7 +124,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="program-form__divide">
+          <fieldset class="program-form__divide program-form__divide--sendrequest">
             <button class="button button--form" type="submit">Отправить заявку</button>
             <small class="program-form__legend">
               * — Обязательные поля
@@ -131,16 +134,20 @@
       </div>
     </section>
 
-    <section class="location location--inner-page">
-      <div class="location__wrapper">
-        <h3 class="location__appeal">Приглашаем<br> к сотрудничеству дилеров!</h3>
-        <p class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-      </div>
-    </section>
+    <div class="desktop-wrapper-map-info">
+      <section class="location location--inner-page">
+        <div class="location__wrapper">
+          <h3 class="location__appeal">Приглашаем<br> к сотрудничеству дилеров!</h3>
+          <p class="location__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
+        </div>
+      </section>
 
-    <section class="map">
-      <img class="map__image" src="img/location-map.png" width="320" height="362" alt="Карта как добраться">
-    </section>
+      <section class="map">
+        <img class="map__image" src="img/location-map.png" width="320" height="362" alt="Карта как добраться">
+        <img class="map__desktop" src="img/desktop-image/map.jpg" width="1440" height="400" alt="Карта как добраться">
+      </section>
+    </div>
+
   </main>
 
   <footer class="page-footer">

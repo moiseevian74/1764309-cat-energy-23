@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico" type="image/svg+xml">
 </head>
 
 <body class="page__body">
@@ -15,20 +17,20 @@
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
       </a>
       <p class="page-header__cap-text">
-        <a href="index.html"><img class="page-header__cap-text-image" src="img/logo-text-header.svg" width="101" height="18"
-          alt="текст: cat energy"></a>
+        <a href="index.html"><img class="page-header__cap-text-image" src="img/logo-text-header.svg" width="101"
+            height="18" alt="текст: cat energy"></a>
       </p>
       <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-    </div>
-    <nav class="main-nav">
-      <div class="main-nav__wrapper">
+      <nav class="main-nav">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
-          <li class="site-list__item"><a class="site-list__link">Каталог продукции</a></li>
-          <li class="site-list__item"><a class="site-list__link" href="form.html">Подбор программы</a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--color" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--color">Каталог продукции</a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--color" href="form.html">Подбор
+              программы</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <main class="page__main">
@@ -290,7 +292,7 @@
             </article>
           </li>
 
-          <li class="catalog__item">
+          <li class="catalog__item catalog__item--show-more">
             <article class="product-card product-card--show-more">
               <a class="product-card__link" href="">
                 <h3 class="product-card__product-name product-card__product-name--icon">Показать еще 100500 товаров</h3>
@@ -309,60 +311,73 @@
         <h3 class="adaptive-additionally-mobile__title">Дополнительные товары</h3>
       </div>
       <div class="adaptive-additionally-mobile__wrapper">
-        <p class="adaptive-additionally-mobile__head">Сахарозаменитель</p>
-        <div class="adaptive-additionally-mobile__inner">
-          <p class="adaptive-additionally-mobile__text">1 упаковка (100 г)</p>
-          <p class="adaptive-additionally-mobile__text">200 Р.</p>
+        <div>
+          <p class="adaptive-additionally-mobile__head">Сахарозаменитель</p>
+          <div class="adaptive-additionally-mobile__inner">
+            <p class="adaptive-additionally-mobile__text">1 упаковка (100 г)</p>
+            <p class="adaptive-additionally-mobile__text">200 Р.</p>
+          </div>
         </div>
         <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
           aria-label="Перейти на страницу оформления товара">Заказать</a>
       </div>
 
       <div class="adaptive-additionally-mobile__wrapper">
-        <p class="adaptive-additionally-mobile__head">Питьевая вода</p>
-        <div class="adaptive-additionally-mobile__inner">
-          <p class="adaptive-additionally-mobile__text">5 литров</p>
-          <p class="adaptive-additionally-mobile__text">50 Р.</p>
+        <div>
+          <p class="adaptive-additionally-mobile__head">Питьевая вода</p>
+          <div class="adaptive-additionally-mobile__inner">
+            <p class="adaptive-additionally-mobile__text">5 литров</p>
+            <p class="adaptive-additionally-mobile__text">50 Р.</p>
+          </div>
         </div>
         <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
           aria-label="Перейти на страницу оформления товара">Заказать</a>
       </div>
 
       <div class="adaptive-additionally-mobile__wrapper">
-        <p class="adaptive-additionally-mobile__head">Молоко</p>
-        <div class="adaptive-additionally-mobile__inner">
-          <p class="adaptive-additionally-mobile__text">1 литр</p>
-          <p class="adaptive-additionally-mobile__text">100 Р.</p>
+        <div>
+          <p class="adaptive-additionally-mobile__head">Молоко</p>
+          <div class="adaptive-additionally-mobile__inner">
+            <p class="adaptive-additionally-mobile__text">1 литр</p>
+            <p class="adaptive-additionally-mobile__text">100 Р.</p>
+          </div>
         </div>
         <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
           aria-label="Перейти на страницу оформления товара">Заказать</a>
       </div>
 
       <div class="adaptive-additionally-mobile__wrapper">
-        <p class="adaptive-additionally-mobile__head">Витамины</p>
-        <div class="adaptive-additionally-mobile__inner">
-          <p class="adaptive-additionally-mobile__text">1 упаковка (30 г)</p>
-          <p class="adaptive-additionally-mobile__text">300 Р.</p>
+        <div>
+          <p class="adaptive-additionally-mobile__head">Витамины</p>
+          <div class="adaptive-additionally-mobile__inner">
+            <p class="adaptive-additionally-mobile__text">1 упаковка (30 г)</p>
+            <p class="adaptive-additionally-mobile__text">300 Р.</p>
+          </div>
         </div>
         <a class="adaptive-additionally-mobile__link adaptive-additionally-mobile__link--buy" href=""
           aria-label="Перейти на страницу оформления товара">Заказать</a>
       </div>
     </section>
 
-    <aside class="advertising">
-      <p class="advertising__text">Закажите все<br> и получите чехол для кота в подарок!</p>
-    </aside>
+    <div class="advertising">
+      <aside class="advertising__wrapper">
+        <p class="advertising__text">Закажите все<br> и получите чехол для кота в подарок!</p>
+      </aside>
+    </div>
 
-    <section class="location location--catalog">
-      <div class="location__wrapper">
-        <h3 class="location__appeal">Приглашаем<br> к сотрудничеству дилеров!</h3>
-        <p class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-      </div>
-    </section>
+    <div class="desktop-wrapper-map-info">
+      <section class="location location--inner-page">
+        <div class="location__wrapper">
+          <h3 class="location__appeal">Приглашаем<br> к сотрудничеству дилеров!</h3>
+          <p class="location__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
+        </div>
+      </section>
 
-    <section class="map">
-      <img class="map__image" src="img/location-map.png" width="320" height="362" alt="Карта как добраться">
-    </section>
+      <section class="map">
+        <img class="map__image" src="img/location-map.png" width="320" height="362" alt="Карта как добраться">
+        <img class="map__desktop" src="img/desktop-image/map.jpg" width="1440" height="400" alt="Карта как добраться">
+      </section>
+    </div>
 
   </main>
 
@@ -413,38 +428,3 @@
 </body>
 
 </html>
-
-<!--
-      <div style="display: none;">
-        <section class="catalog__additionally-desktop">
-          <div class="catalog__wrapper">
-            <table>
-              <tr>
-                <th>Сахарозаменитель</th>
-                <th>1 упаковка (100 г)</th>
-                <th>200 Р.</th>
-                <th><button class="button" type="button" aria-label="Добавить продукт в корзину">Заказать</button></th>
-              </tr>
-              <tr>
-                <td>Питьевая вода</td>
-                <td>5 литров</td>
-                <td>50 Р.</td>
-                <th><button class="button" type="button" aria-label="Добавить продукт в корзину">Заказать</button></th>
-              </tr>
-              <tr>
-                <td>Молоко</td>
-                <td>1 литр</td>
-                <td>100 Р.</td>
-                <th><button class="button" type="button" aria-label="Добавить продукт в корзину">Заказать</button></th>
-              </tr>
-              <tr>
-                <td>Витамины</td>
-                <td>1 упаковка (30 г)</td>
-                <td>300 Р.</td>
-                <th><button class="button" type="button" aria-label="Добавить продукт в корзину">Заказать</button></th>
-              </tr>
-            </table>
-          </div>
-        </section>
-      </div>
--->
