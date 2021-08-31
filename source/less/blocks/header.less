@@ -192,8 +192,10 @@
 }
 
 .main-nav--closed { //для js
-  width: @second-width;
-  display: none;
+  @media (max-width: @mobile-width-only) {
+    width: @second-width;
+    display: none;
+  }
 }
 
 .main-nav__list {
