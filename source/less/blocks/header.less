@@ -108,21 +108,62 @@
 }
 
 .page-header__toggle {
-  position: relative;
-  cursor: pointer;
-  padding: 0;
-  background-color: @base-background-color;
-  border: none;
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    background-color: @base-background-color;
+    border: none;
+    z-index: 2;
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: -10px;
-    left: -34px;
-    width: 24px;
-    height: 20px;
-    background-image: url("../img/logo-toggle.svg");
-    background-repeat: no-repeat;
+    &::before {
+      position: absolute;
+      content: "";
+      top: -10px;
+      left: -34px;
+      width: 24px;
+      height: 20px;
+      background-image: url("../img/logo-toggle.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__toggle--close { //для js
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    background-color: @base-background-color;
+    border: none;
+    z-index: 2;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: -3px;
+      left: -35px;
+      width: 24px;
+      height: 1px;
+      background-color: @base-text-heading-color;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -139,6 +180,7 @@
   margin: 0 auto;
   text-align: center;
   box-sizing: border-box;
+  display: block;
 
   @media (min-width: @tablet-width) {
     width: 535px;
@@ -146,6 +188,13 @@
 
   @media (min-width: @desktop-width) {
     width: 1040px;
+  }
+}
+
+.main-nav--closed { //для js
+  @media (max-width: @mobile-width-only) {
+    width: @second-width;
+    display: none;
   }
 }
 
