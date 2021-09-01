@@ -103,12 +103,14 @@
         </div>
         <p class="live-example__food-price">Затраты на питание: <span class="live-example__decoration">15 000
             руб.</span></p>
-        <img class="live-example-image image-slider" src="img/before-mobile-cat.png" width="311" height="232"
+        <img class="live-example-image" src="img/before-mobile-cat.png" width="311" height="232"
           alt="Фото котика до программы" srcset="img/before-mobile-cat@2x.png 2x">
         <p class="live-example__toggles slider__toggles">
-          <button class="slider__toggle" type="button">Было</button>
-          <span class="slider__image"><img src="img/slider.png" alt="Слайдер" srcset="img/slider@2x.png 2x"></span>
-          <button class="slider__toggle" type="button">Стало</button>
+          <button class="slider__toggle slider__toggle--back" type="button">Было</button>
+          <span class="slider__image">
+            <input class="slider__tablet" type="range" min="1" max="100" value="50" id="range-bar">
+            <img class="slider__mobile" src="img/slider.png" alt="Слайдер" srcset="img/slider@2x.png 2x"></span>
+          <button class="slider__toggle slider__toggle--next" type="button">Стало</button>
         </p>
       </div>
     </section>
