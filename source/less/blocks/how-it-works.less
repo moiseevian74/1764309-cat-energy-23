@@ -28,7 +28,7 @@
 }
 
 .how-it-works__title {
-  padding-top: 20px;
+  padding-top: 7px;
   padding-bottom: 40px;
   .reset-p-and-heading ();
   font-family: @second-base-font;
@@ -38,13 +38,15 @@
   color: @base-text-heading-color;
 
   @media (min-width: @tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 72px;
     font-size: 60px;
     line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 41px;
-    padding-bottom: 42px;
+    padding-bottom: 71px;
   }
 }
 
@@ -55,9 +57,9 @@
     display: grid;
     min-height: 578px;
     grid-template-columns: 250px 250px;
-    grid-gap: 62px 132px;
+    grid-gap: 58px 134px;
     padding-bottom: 16px;
-    margin-bottom: 43px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -84,31 +86,36 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 244px;
-    padding-top: 143px;
+    width: 245px;
+    padding-top: 112px;
     padding-left: 0;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     width: 245px;
   }
 }
 
 @media (min-width: @tablet-width) { //only desktop and tablet
   .how-it-works__item.how-it-works__item--icon-leaf {
-    background: url("../img/tablet-image/1.svg") no-repeat 125px 30px;
+    background: url("../img/tablet-image/1.svg") no-repeat 125px 0;
   }
 
   .how-it-works__item.how-it-works__item--icon-powder {
-    background: url("../img/tablet-image/2.svg") no-repeat 125px 30px;
+    background: url("../img/tablet-image/2.svg") no-repeat 125px 0;
   }
 
   .how-it-works__item.how-it-works__item--icon-knife-fork {
-    background: url("../img/tablet-image/3.svg") no-repeat 125px 30px;
+    background: url("../img/tablet-image/3.svg") no-repeat 125px 0;
   }
 
   .how-it-works__item.how-it-works__item--icon-timer {
-    background: url("../img/tablet-image/4.svg") no-repeat 125px 30px;
+    background: url("../img/tablet-image/4.svg") no-repeat 125px 0;
   }
 }
 
@@ -116,6 +123,20 @@
   &::before {
     background-image: url("../img/message-1.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/message-1@2x.png");
+      background-size: 60px 60px;
+    }
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/tablet-image/message-1-tablet.png");
+      background-size: 80px 80px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/tablet-image/message-1-tablet@2x.png");
+      }
+    }
   }
 }
 
@@ -123,6 +144,20 @@
   &::before {
     background-image: url("../img/message-2.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/message-2@2x.png");
+      background-size: 60px 60px;
+    }
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/tablet-image/message-2-tablet.png");
+      background-size: 80px 80px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/tablet-image/message-2-tablet@2x.png");
+      }
+    }
   }
 }
 
@@ -130,6 +165,20 @@
   &::before {
     background-image: url("../img/message-3.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/message-3@2x.png");
+      background-size: 60px 60px;
+    }
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/tablet-image/message-3-tablet.png");
+      background-size: 80px 80px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/tablet-image/message-3-tablet@2x.png");
+      }
+    }
   }
 }
 
@@ -137,5 +186,19 @@
   &::before {
     background-image: url("../img/message-4.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/message-4@2x.png");
+      background-size: 60px 60px;
+    }
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/tablet-image/message-4-tablet.png");
+      background-size: 80px 80px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/tablet-image/message-4-tablet@2x.png");
+      }
+    }
   }
 }

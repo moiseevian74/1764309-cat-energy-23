@@ -13,12 +13,22 @@
 
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
+      <a href="index.html" class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/desktop-image/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/tablet-image/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
+        </picture>
       </a>
       <p class="page-header__cap-text">
-        <a href="index.html"><img class="page-header__cap-text-image" src="img/logo-text-header.svg" width="101"
-            height="18" alt="текст: cat energy"></a>
+        <a href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/desktop-image/logo-text-header-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/tablet-image/logo-text-header-tablet.svg">
+            <img class="page-header__cap-text-image" src="img/logo-text-header.svg" width="101" height="18"
+              alt="текст: cat energy">
+          </picture>
+        </a>
       </p>
       <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <nav class="main-nav">

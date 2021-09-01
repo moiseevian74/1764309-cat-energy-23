@@ -43,15 +43,21 @@
       height: 462px;
       top: 136px;
       left: 934px;
-      background: url("../img/desktop-image/rectangle.jpg");
+      background-image: url("../img/desktop-image/rectangle.jpg");
       background-color: initial;
+      background-size: 395px 462px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/desktop-image/rectangle@2x.png");
+        background-size: 395px 462px;
+      }
     }
   }
 }
 
 .live-example__title {
-  padding-top: 27px;
-  padding-bottom: 33px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   .reset-p-and-heading ();
   font-family: @second-base-font;
   font-size: @h2-font-size;
@@ -60,6 +66,7 @@
   color: @base-text-heading-color;
 
   @media (min-width: @tablet-width) {
+    padding-top: 27px;
     font-size: 60px;
     line-height: 60px;
     padding-bottom: 63px;
@@ -74,7 +81,7 @@
 
 .live-example__description {
   .reset-p-and-heading ();
-  padding-bottom: 25px;
+  padding-bottom: 26px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 54px;
@@ -93,12 +100,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
-  grid-gap: 42px;
+  grid-gap: 32px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 162px 162px 1fr;
     display: inline-grid;
     margin-bottom: 50px;
+    grid-gap: 42px;
   }
 
   @media (min-width: @desktop-width) {
@@ -141,7 +149,7 @@
     line-height: 37px;
     width: 162px;
     min-height: 72px;
-    background: none; //пока что так
+    background: url("../img/tablet-image/border-for-example-tablet.svg") no-repeat;
 
     &::after {
       font-size: 14px;
@@ -187,7 +195,7 @@
     line-height: 37px;
     width: 162px;
     min-height: 72px;
-    background: none; //пока что так
+    background: url("../img/tablet-image/border-for-example-tablet-2.svg") no-repeat;
 
     &::after {
       font-size: 14px;
@@ -250,11 +258,19 @@
     box-sizing: border-box;
     width: 690px;
     height: 557px;
-    background: url("../img/desktop-image/image-two-cats-desktop.png") no-repeat;
+    background-image: url("../img/tablet-image/two-cats-tablet.png");
+    background-repeat: no-repeat;
+    background-position: -16px -18px;
+    background-size: 708px 620px;
     padding-left: 690px;
     margin-left: 16px;
     margin-top: 31px;
     margin-bottom: -31px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tablet-image/two-cats-tablet@2x.png");
+      background-size: 708px 620px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -279,6 +295,11 @@
       width: 690px;
       height: 550px;
       background: url("../img/desktop-image/image-two-cats-desktop.png") no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/desktop-image/image-two-cats-desktop@2x.png");
+        background-size: 690px 656px;
+      }
     }
   }
 
@@ -340,7 +361,7 @@
         left: -234px;
         height: 38px;
         width: 38px;
-        background: url("../img/desktop-image/slider-control.png") no-repeat;
+        background: url("../img/desktop-image/slider-control.svg") no-repeat;
       }
 
       &:hover::before {
@@ -362,7 +383,7 @@
         left: -236px;
         height: 38px;
         width: 38px;
-        background: url("../img/desktop-image/slider-control.png") no-repeat;
+        background: url("../img/desktop-image/slider-control.svg") no-repeat;
       }
 
       &:hover::before {
