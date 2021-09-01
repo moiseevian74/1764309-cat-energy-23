@@ -17,4 +17,3 @@ btnNext.addEventListener("click", function (evt) {
 btnBack.addEventListener("click", function (evt) {
   sliderMobile.classList.remove("slider__mobile--scale");
 });
-
