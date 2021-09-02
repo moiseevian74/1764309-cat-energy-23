@@ -14,11 +14,21 @@
   <header class="page-header page-header--background">
     <div class="page-header__wrapper">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/desktop-image/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/tablet-image/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип собачка">
+        </picture>
       </a>
       <p class="page-header__cap-text">
-        <a href=""><img class="page-header__cap-text-image" src="img/logo-text-header.svg" width="101" height="18"
-            alt="текст: cat energy"></a>
+        <a>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/desktop-image/logo-text-header-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/tablet-image/logo-text-header-tablet.svg">
+            <img class="page-header__cap-text-image" src="img/logo-text-header.svg" width="101" height="18"
+              alt="текст: cat energy">
+          </picture>
+        </a>
       </p>
       <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <nav class="main-nav">
@@ -38,7 +48,7 @@
         <h1 class="welcome__heading-h1">Функциональное питание для котов</h1>
         <p class="welcome__description-contents">Занялся собой? Займись котом!</p>
         <img class="welcome__image" src="img/can-mobile.png" width="280" height="270"
-          alt="Баночка c питанием для кошек 500г со вкусом курицы">
+          alt="Баночка c питанием для кошек 500г со вкусом курицы" srcset="img/can-mobile@2x.png 2x">
         <a class="welcome__link" href="form.html">Подобрать программу</a>
       </div>
     </section>
@@ -93,12 +103,14 @@
         </div>
         <p class="live-example__food-price">Затраты на питание: <span class="live-example__decoration">15 000
             руб.</span></p>
-        <img class="live-example-image image-slider" src="img/before-mobile-cat.png" width="311" height="232"
-          alt="Фото котика до программы">
+        <img class="live-example-image" src="img/before-mobile-cat.png" width="311" height="232"
+          alt="Фото котика до программы" srcset="img/before-mobile-cat@2x.png 2x">
         <p class="live-example__toggles slider__toggles">
-          <button class="slider__toggle" type="button">Было</button>
-          <span class="slider__image"><img src="img/slider.png" alt="Слайдер"></span>
-          <button class="slider__toggle" type="button">Стало</button>
+          <button class="slider__toggle slider__toggle--back" type="button">Было</button>
+          <span class="slider__image">
+            <input class="slider__tablet" type="range" min="1" max="100" value="50" id="range-bar">
+            <img class="slider__mobile" src="img/slider.png" alt="Слайдер" srcset="img/slider@2x.png 2x"></span>
+          <button class="slider__toggle slider__toggle--next" type="button">Стало</button>
         </p>
       </div>
     </section>

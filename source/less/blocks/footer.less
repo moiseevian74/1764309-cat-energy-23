@@ -41,7 +41,7 @@
 .page-footer__contacts-text {
   .reset-p-and-heading ();
   text-align: center;
-  padding-top: 35px;
+  padding-top: 39px;
   padding-bottom: 28px;
   border-bottom: 1px solid @border-second-color;
 
@@ -111,6 +111,10 @@
 .copyright__link {
   text-align: right;
   padding-top: 22px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: 108px;
+  }
 
   @media (min-width: @tablet-width) {
     text-align: right;

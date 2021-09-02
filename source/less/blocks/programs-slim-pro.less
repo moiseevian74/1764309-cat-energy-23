@@ -86,7 +86,7 @@
     content: "";
     position: absolute;
     width: 50px;
-    height: 50px;
+    height: 54px;
     top: 22px;
     left: 22px;
     background-image: url("../img/cat_slim-logo.svg");
@@ -194,14 +194,19 @@
   .reset-a ();
   box-sizing: border-box;
   width: 90px;
-  min-height: 18px;
+  height: 18px;
   position: relative;
   top: 20px;
-  left: 52px;
+  left: 20px;
   text-transform: @text-transfrom-up;
   font-family: @second-base-font;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    height: 30px;
+    left: 52px;
+  }
 
   @media (min-width: @desktop-width) {
     top: -8px;

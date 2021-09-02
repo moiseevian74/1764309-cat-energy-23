@@ -7,14 +7,28 @@
   @media (min-width: @tablet-width) {
     width: 708px;
     min-height: 830px;
-    background: url("../img/tablet-image/welcome-background-can.jpg") no-repeat  28px 227px;
+    background-image: url("../img/tablet-image/welcome-background-can.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 227px;
     background-size: 709px 609px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tablet-image/welcome-background-can@2x.png");
+      background-size: 709px 609px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 1440px;
     min-height: 654px;
-    background: url("../img/desktop-image/desktop-welcome-can-back.png") no-repeat  559px 19px;
+    background-image: url("../img/desktop-image/desktop-welcome-can-back.png");
+    background-size: 552px 499px;
+    background-position: 559px 19px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/desktop-image/desktop-welcome-can-back@2x.png");
+      background-size: 552px 499px;
+    }
   }
 }
 
@@ -22,11 +36,18 @@
   margin: 0 auto;
   padding: 0;
   width: @second-width;
-  background: url("../img/background-welcome-main.jpg") no-repeat border-box;
+  background-image: url("../img/background-welcome-main.jpg");
+  background-clip: border-box;
+  background-repeat: no-repeat;
   background-size: 320px 302px;
   font-family: @second-base-font;
   box-sizing: border-box;
   text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-welcome-main@2x.png");
+    background-size: 320px 302px;
+  }
 
   @media (min-width: @tablet-width) {
     width: 708px;
