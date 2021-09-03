@@ -56,6 +56,21 @@
   }
 }
 
+.page-footer__cap-text-image {
+  fill: none;
+  cursor: pointer;
+
+  &:hover {
+    fill: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    fill: none;
+    opacity: 0.6;
+  }
+}
+
 .page-footer__social {
   border-bottom: 1px solid @border-second-color;
 
@@ -92,19 +107,24 @@
 }
 
 .copyright__text {
-  .reset-p-and-heading ();
+  .reset-a ();
   text-align: left;
   font-size: 16px;
-  padding-top: 28px;
+  margin-top: 28px;
+  height: 18px;
+
+  &:active {
+    color: @focus-base-color;
+  }
 
   @media (min-width: @tablet-width) {
     text-align: right;
     line-height: 18px;
-    padding-top: 21px;
+    margin-top: 21px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 26px;
+    margin-top: 26px;
   }
 }
 
@@ -118,11 +138,71 @@
 
   @media (min-width: @tablet-width) {
     text-align: right;
-    width: 35px;
+    width: 34px;
+    height: 34px;
     padding-top: 14px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 20px;
+  }
+}
+
+.social__item-image {
+  fill: @base-svg-fill;
+
+  &:hover {
+    fill: @hover-svg-fill;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+
+.social__item-image--vkontakte {
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 22px;
+    margin-bottom: 12px;
+  }
+}
+
+.social__item-image--instagram {
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 23px;
+    margin-bottom: 8px;
+    margin-right: 3px;
+  }
+}
+
+.social__item-image--facebook {
+  stroke: @base-svg-fill;
+  fill: none;
+
+  &:hover {
+    stroke: @hover-svg-fill;
+    fill: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 28px;
+    height: 34px;
+    margin-bottom: 10px;
+    margin-right: 18px;
+  }
+}
+
+.copyright-htmlacademy {
+  fill: @base-svg-fill;
+
+  &:hover {
+    fill: @hover-svg-fill;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

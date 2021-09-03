@@ -4,6 +4,7 @@ const btnBack = document.querySelector(".slider__toggle--back");
 const btnNext = document.querySelector(".slider__toggle--next");
 const sliderMobile = document.querySelector(".slider__mobile");
 
+
 mainNav.classList.add("main-nav--closed");
 
 btnToggle.addEventListener("click", function (evt) {
@@ -14,6 +15,7 @@ btnToggle.addEventListener("click", function (evt) {
 btnNext.addEventListener("click", function (evt) {
   sliderMobile.classList.add("slider__mobile--scale");
 });
+
 btnBack.addEventListener("click", function (evt) {
   sliderMobile.classList.remove("slider__mobile--scale");
 });
