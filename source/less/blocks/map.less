@@ -1,11 +1,12 @@
 .map {
   margin: 0 auto;
+  height: 362px;
   width: 100%;
-  box-sizing: border-box;
+  display: block;
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    min-height: 400px;
+    height: 400px;
     text-align: center;
   }
 
@@ -15,23 +16,6 @@
 }
 
 .map__image {
-  display: block;
-  margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    margin: 0 auto;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.map__desktop {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
-    height: 400px;
-  }
+  width: 100%;
+  height: 100%;
 }
