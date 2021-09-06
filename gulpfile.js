@@ -8,11 +8,12 @@ const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
-const squoosh = require("gulp-libsquoosh");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const imagemin = require("gulp-imagemin");
 const sync = require("browser-sync").create();
+
 
 // Styles
 
@@ -72,7 +73,7 @@ exports.scripts = scripts;
 
 const optimazeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg,svg}')
-  .pipe(squoosh())
+  .pipe(imagemin())
   .pipe(gulp.dest('build/img'));
 }
 
@@ -158,8 +159,9 @@ exports.reload = reload;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('source/js/app.js', gulp.series(scripts));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
