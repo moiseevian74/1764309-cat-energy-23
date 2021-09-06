@@ -31,7 +31,21 @@ const styles = () => {
     .pipe(sync.stream());
 }
 
-exports.styles = styles;
+const stylesBuild = () => {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer(),
+      csso()
+    ]))
+    .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"));
+}
+
+exports.stylesBuild = stylesBuild;
 
 // HTML
 
@@ -139,6 +153,8 @@ const reload = (done) => {
   done();
 }
 
+exports.reload = reload;
+
 // Watcher
 
 const watcher = () => {
@@ -153,7 +169,7 @@ const build = gulp.series(
   copy,
   optimazeImages,
   gulp.parallel(
-    styles,
+    stylesBuild,
     html,
     scripts,
     createSprite,
