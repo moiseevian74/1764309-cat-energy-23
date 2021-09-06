@@ -278,6 +278,30 @@
   }
 }
 
+.live-example-after {
+  @media (max-width: @mobile-width-only) {
+    margin-left: 18px;
+    padding-bottom: 15px;
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.hidden { // skinny and fat cat on mobile
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.show {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
+}
+
 .live-example__toggles {
   min-height: 30px;
   display: grid;
