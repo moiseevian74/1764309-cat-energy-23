@@ -18,7 +18,7 @@ const sync = require("browser-sync").create();
 // Styles
 
 const styles = () => {
-  return gulp.src("docs/less/style.less")
+  return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
@@ -28,12 +28,12 @@ const styles = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(sync.stream());
 }
 
 const stylesBuild = () => {
-  return gulp.src("docs/less/style.less")
+  return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
@@ -43,7 +43,7 @@ const stylesBuild = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("docs/css"));
 }
 
 exports.stylesBuild = stylesBuild;
@@ -51,9 +51,9 @@ exports.stylesBuild = stylesBuild;
 // HTML
 
 const html = () => {
-  return gulp.src('docs/*.html')
+  return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 }
 
 exports.html = html;
@@ -61,10 +61,10 @@ exports.html = html;
 // Scripts
 
 const scripts = () => {
-  return gulp.src('docs/js/app.js')
+  return gulp.src('source/js/app.js')
   .pipe(terser())
   .pipe(rename("app.min.js"))
-  .pipe(gulp.dest('build/js'));
+  .pipe(gulp.dest('docs/js'));
 }
 
 exports.scripts = scripts;
@@ -72,16 +72,16 @@ exports.scripts = scripts;
 // Images
 
 const optimazeImages = () => {
-  return gulp.src('docs/img/**/*.{png,jpg,svg}')
+  return gulp.src('source/img/**/*.{png,jpg,svg}')
   .pipe(imagemin())
-  .pipe(gulp.dest('build/img'));
+  .pipe(gulp.dest('docs/img'));
 }
 
 exports.optimazeImages = optimazeImages;
 
 const copyImages = () => {
-  return gulp.src('docs/img/**/*.{png,jpg,svg}')
-  .pipe(gulp.dest('build/img'));
+  return gulp.src('source/img/**/*.{png,jpg,svg}')
+  .pipe(gulp.dest('docs/img'));
 }
 
 exports.copyImages = copyImages;
@@ -89,9 +89,9 @@ exports.copyImages = copyImages;
 // Webp
 
 const createWebp = () => {
-  return gulp.src('docs/img/**/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest('build/img'));
+  .pipe(gulp.dest('docs/img'));
 }
 
 exports.createWebp = createWebp;
@@ -99,10 +99,10 @@ exports.createWebp = createWebp;
 // Sprite
 
 const createSprite = () => {
-  return gulp.src('docs/img/**/*.svg')
+  return gulp.src('source/img/**/*.svg')
   .pipe(svgstore({inlineSvg: true}))
   .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
+  .pipe(gulp.dest('docs/img'));
 }
 
 exports.createSprite = createSprite;
@@ -111,13 +111,13 @@ exports.createSprite = createSprite;
 
 const copy = (done) => {
   gulp.src([
-    'docs/fonts/*.{woff2,woff}',
-    'docs/*.ico',
-    'docs/img/**/*.svg',
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/img/**/*.svg',
   ], {
-    base: 'docs'
+    base: 'source'
   })
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('docs'))
   done();
 }
 
@@ -126,7 +126,7 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
-  return del('build');
+  return del('docs');
 };
 
 exports.clean = clean;
@@ -136,7 +136,7 @@ exports.clean = clean;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'docs'
     },
     cors: true,
     notify: false,
@@ -159,9 +159,9 @@ exports.reload = reload;
 // Watcher
 
 const watcher = () => {
-  gulp.watch('docs/less/**/*.less', gulp.series(styles));
-  gulp.watch('docs/js/app.js', gulp.series(scripts));
-  gulp.watch('docs/*.html', gulp.series(html, reload));
+  gulp.watch('source/less/**/*.less', gulp.series(styles));
+  gulp.watch('source/js/app.js', gulp.series(scripts));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
